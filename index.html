@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sultan The Flaming Tandoor | Authentic Indian & Pakistani Cuisine in Sherwood, OR</title>
-    <meta name="description" content="Experience authentic Indian & Pakistani cuisine at Sultan The Flaming Tandoor in Sherwood, OR. Tandoori specialties, curries, biryani, fresh naan. Order online, reserve table, or buy gift cards.">
-    <meta name="keywords" content="Indian restaurant, Pakistani cuisine, Sherwood Oregon, tandoori, biryani, curry, naan, halal, authentic">
-    
+    <meta name="description"
+        content="Experience authentic Indian & Pakistani cuisine at Sultan The Flaming Tandoor in Sherwood, OR. Tandoori specialties, curries, biryani, fresh naan. Order online, reserve table, or buy gift cards.">
+    <meta name="keywords"
+        content="Indian restaurant, Pakistani cuisine, Sherwood Oregon, tandoori, biryani, curry, naan, halal, authentic">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- AOS Animation Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.css">
-    
+
     <style>
         :root {
-            --primary: #d4af37;
-            --primary-dark: #b8941f;
-            --primary-light: #e8c547;
+            --primary: #CD3333;
+            --primary-dark: #CD3333;
+            --primary-light: #CD3333;
             --secondary: #8b1538;
             --secondary-dark: #731229;
             --accent: #ff6b35;
@@ -112,32 +117,14 @@
         }
 
         .logo-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gradient);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            box-shadow: var(--shadow);
-            overflow: hidden;
+            width: 120px;
+            height: 120px;
         }
 
         .logo-icon img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .nav-links {
@@ -235,12 +222,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                135deg,
-                rgba(26, 26, 26, 0.7) 0%,
-                rgba(139, 21, 56, 0.4) 50%,
-                rgba(212, 175, 55, 0.3) 100%
-            );
+            background: linear-gradient(135deg,
+                    rgba(26, 26, 26, 0.7) 0%,
+                    rgba(139, 21, 56, 0.4) 50%,
+                    rgba(212, 175, 55, 0.3) 100%);
             z-index: -1;
         }
 
@@ -383,6 +368,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -581,25 +567,7 @@
             gap: 0.3rem;
         }
 
-        .add-to-cart-btn {
-            background: var(--gradient);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
 
-        .add-to-cart-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-        }
 
         /* Category Section Enhancement */
         .category-section {
@@ -757,7 +725,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
             display: flex;
             align-items: end;
             padding: 2rem;
@@ -782,14 +750,24 @@
             width: 200%;
             height: 200%;
             background: radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 75% 75%, rgba(139, 21, 56, 0.02) 0%, transparent 50%);
+                radial-gradient(circle at 75% 75%, rgba(139, 21, 56, 0.02) 0%, transparent 50%);
             animation: float 20s ease-in-out infinite;
         }
 
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(120deg); }
-            66% { transform: translate(-20px, 20px) rotate(240deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(30px, -30px) rotate(120deg);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) rotate(240deg);
+            }
         }
 
         /* Location Hero Section */
@@ -977,9 +955,17 @@
         }
 
         @keyframes statusPulse {
-            0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
         }
 
         /* Hours Section */
@@ -1227,8 +1213,9 @@
             color: var(--text-light);
             font-weight: 500;
         }
-            position: relative;
-            overflow: hidden;
+
+        position: relative;
+        overflow: hidden;
         }
 
         .location-section::before {
@@ -1497,9 +1484,11 @@
             0% {
                 box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
             }
+
             70% {
                 box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
             }
@@ -1999,8 +1988,10 @@
             border-radius: 15px;
             font-size: 0.85rem;
             border: 1px solid rgba(212, 175, 55, 0.2);
-        }-height: 1.8;
-            font-size: 1.05rem;
+        }
+
+        -height: 1.8;
+        font-size: 1.05rem;
         }
 
         .footer-section a:hover {
@@ -2169,6 +2160,7 @@
                 transform: translateX(100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateX(0);
                 opacity: 1;
@@ -2180,6 +2172,7 @@
                 transform: translateX(0);
                 opacity: 1;
             }
+
             to {
                 transform: translateX(100%);
                 opacity: 0;
@@ -2353,8 +2346,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Mobile Menu */
@@ -2391,6 +2389,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loading" id="loading">
@@ -2402,11 +2401,10 @@
         <div class="nav-container">
             <a href="#home" class="logo">
                 <div class="logo-icon">
-                    <img src="https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/12192904-51e7-472b-8d46-f7bee937235c/Logo.png" alt="Sultan Logo">
+                    <img src="assets/Logo .png" alt="Sultan Logo">
                 </div>
-                <span class="logo-text">Sultan</span>
             </a>
-            
+
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#menu" class="nav-link">Menu</a></li>
@@ -2414,16 +2412,16 @@
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            
+
             <button class="order-btn" onclick="openOrderModal()">
                 <i class="fas fa-shopping-cart"></i> Order Now
             </button>
-            
+
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                 <i class="fas fa-bars" id="menu-icon"></i>
             </button>
         </div>
-        
+
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-nav-links">
@@ -2432,7 +2430,8 @@
                 <a href="#features" onclick="toggleMobileMenu()">About</a>
                 <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
                 <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-                <button class="btn btn-primary" onclick="openOrderModal(); toggleMobileMenu();" style="margin-top: 1rem; border: none;">
+                <button class="btn btn-primary" onclick="openOrderModal(); toggleMobileMenu();"
+                    style="margin-top: 1rem; border: none;">
                     <i class="fas fa-shopping-cart"></i> Order Now
                 </button>
             </div>
@@ -2445,7 +2444,8 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <img src="assets/Full Plate Tandoori Chicken.jpg" alt="Full Plate Tandoori Chicken" class="slide-bg">
+                    <img src="assets/Full Plate Tandoori Chicken.jpg" alt="Full Plate Tandoori Chicken"
+                        class="slide-bg">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <div class="slide-badge">
@@ -2454,7 +2454,8 @@
                         </div>
                         <h1 class="slide-title">Flame-Kissed<br>Tandoori<br>Perfection</h1>
                         <p class="slide-description">
-                            Experience the authentic taste of our traditional tandoor oven, where every dish is crafted with passion and centuries-old techniques.
+                            Experience the authentic taste of our traditional tandoor oven, where every dish is crafted
+                            with passion and centuries-old techniques.
                         </p>
                         <div class="slide-buttons">
                             <a href="#menu" class="btn btn-primary">
@@ -2480,7 +2481,8 @@
                         </div>
                         <h1 class="slide-title">Aromatic<br>Biryani<br>Excellence</h1>
                         <p class="slide-description">
-                            Savor our signature biryanis, slow-cooked with premium basmati rice and aromatic spices that transport you to the heart of South Asia.
+                            Savor our signature biryanis, slow-cooked with premium basmati rice and aromatic spices that
+                            transport you to the heart of South Asia.
                         </p>
                         <div class="slide-buttons">
                             <a href="#menu" class="btn btn-primary">
@@ -2506,7 +2508,8 @@
                         </div>
                         <h1 class="slide-title">Rich Curry<br>Traditions<br>Reimagined</h1>
                         <p class="slide-description">
-                            Indulge in our creamy butter chicken and authentic curries, prepared with fresh ingredients and generations of culinary wisdom.
+                            Indulge in our creamy butter chicken and authentic curries, prepared with fresh ingredients
+                            and generations of culinary wisdom.
                         </p>
                         <div class="slide-buttons">
                             <a href="#menu" class="btn btn-primary">
@@ -2521,7 +2524,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Navigation -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -2536,10 +2539,11 @@
                 <div class="section-badge">Our Signature Menu</div>
                 <h2 class="section-title">Culinary Excellence</h2>
                 <p class="section-description">
-                    From our traditional tandoor to your table - discover authentic flavors crafted with premium ingredients and time-honored recipes.
+                    From our traditional tandoor to your table - discover authentic flavors crafted with premium
+                    ingredients and time-honored recipes.
                 </p>
             </div>
-            
+
             <div class="menu-filters" data-aos="fade-up" data-aos-delay="200">
                 <button class="filter-btn active" onclick="filterMenu('all')">All Items</button>
                 <button class="filter-btn" onclick="filterMenu('appetizers')">Appetizers</button>
@@ -2548,7 +2552,7 @@
                 <button class="filter-btn" onclick="filterMenu('biryani')">Biryani</button>
                 <button class="filter-btn" onclick="filterMenu('vegetarian')">Vegetarian</button>
             </div>
-            
+
             <div class="menu-grid" id="menuGrid">
                 <!-- Menu items will be populated by JavaScript -->
             </div>
@@ -2562,10 +2566,11 @@
                 <div class="section-badge">Why Choose Sultan</div>
                 <h2 class="section-title">Authentic Excellence</h2>
                 <p class="section-description">
-                    We bring you the finest Indian and Pakistani cuisine with traditional cooking methods and fresh, premium ingredients.
+                    We bring you the finest Indian and Pakistani cuisine with traditional cooking methods and fresh,
+                    premium ingredients.
                 </p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
@@ -2573,57 +2578,63 @@
                     </div>
                     <h3 class="feature-title">Tandoori Masters</h3>
                     <p class="feature-description">
-                        Our clay tandoor oven reaches 900°F, creating that authentic smoky flavor and perfect char on our kebabs, naan, and specialties.
+                        Our clay tandoor oven reaches 900°F, creating that authentic smoky flavor and perfect char on
+                        our kebabs, naan, and specialties.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <i class="fas fa-seedling"></i>
                     </div>
                     <h3 class="feature-title">Fresh Spices</h3>
                     <p class="feature-description">
-                        We grind our spices daily and source the finest ingredients to create authentic flavor profiles that transport you to South Asia.
+                        We grind our spices daily and source the finest ingredients to create authentic flavor profiles
+                        that transport you to South Asia.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3 class="feature-title">Expert Chefs</h3>
                     <p class="feature-description">
-                        Our experienced chefs bring generations of culinary knowledge, preparing each dish with traditional techniques and modern precision.
+                        Our experienced chefs bring generations of culinary knowledge, preparing each dish with
+                        traditional techniques and modern precision.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="feature-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3 class="feature-title">Dietary Options</h3>
                     <p class="feature-description">
-                        Extensive vegetarian, vegan, and gluten-free options ensure everyone can enjoy our authentic flavors and hospitality.
+                        Extensive vegetarian, vegan, and gluten-free options ensure everyone can enjoy our authentic
+                        flavors and hospitality.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="feature-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <h3 class="feature-title">Award Winning</h3>
                     <p class="feature-description">
-                        Recognized by local food critics and loved by our community for consistent quality and exceptional dining experience.
+                        Recognized by local food critics and loved by our community for consistent quality and
+                        exceptional dining experience.
                     </p>
                 </div>
-                
+
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
                     <div class="feature-icon">
                         <i class="fas fa-car"></i>
                     </div>
                     <h3 class="feature-title">Multiple Services</h3>
                     <p class="feature-description">
-                        Dine-in, takeout, delivery, and catering services available to bring authentic flavors wherever you are.
+                        Dine-in, takeout, delivery, and catering services available to bring authentic flavors wherever
+                        you are.
                     </p>
                 </div>
             </div>
@@ -2640,7 +2651,7 @@
                     Take a peek into our kitchen and see the artistry behind every dish we create.
                 </p>
             </div>
-            
+
             <div class="gallery-grid">
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
                     <img src="assets/Chicken Tikka Kebab.png" alt="Chicken Tikka Kebabs">
@@ -2648,35 +2659,35 @@
                         <span>Chicken Tikka Kebabs</span>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
                     <img src="assets/Chicken Biryani.jpg" alt="Aromatic Biryani">
                     <div class="gallery-overlay">
                         <span>Aromatic Biryani</span>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
                     <img src="assets/Garlic Naan.jpg" alt="Fresh Garlic Naan">
                     <div class="gallery-overlay">
                         <span>Fresh Garlic Naan</span>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
                     <img src="assets/Butter Masala.jpg" alt="Butter Chicken Curry">
                     <div class="gallery-overlay">
                         <span>Butter Chicken Curry</span>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
                     <img src="assets/Mixed Vegetable Masala.jpg" alt="Mixed Vegetable Masala">
                     <div class="gallery-overlay">
                         <span>Mixed Vegetable Masala</span>
                     </div>
                 </div>
-                
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
                     <img src="assets/Vegetable Samosa.png" alt="Traditional Samosas">
                     <div class="gallery-overlay">
@@ -2695,9 +2706,9 @@
                 <div class="location-hero-content">
                     <div class="location-status-card">
                         <div class="status-display">
-                            <span id="main-status" class="status-text">Checking...</span>
+                            <span id="main-status" class="status-text">Call Now!</span>
                             <div class="status-details">
-                                <span id="next-change">Loading hours...</span>
+                                <span id="next-change">We are ready to take your order!</span>
                             </div>
                         </div>
                         <div class="quick-contact">
@@ -2707,7 +2718,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="location-address">
                         <h2>Visit Our Restaurant</h2>
                         <div class="address-line">
@@ -2715,7 +2726,8 @@
                             <span>16370 Southwest Langer Drive, Sherwood, OR 97140</span>
                         </div>
                         <div class="location-actions-inline">
-                            <a href="https://maps.google.com/?q=16370+SW+Langer+Dr,+Sherwood,+OR+97140" target="_blank" class="action-chip primary">
+                            <a href="https://maps.google.com/?q=16370+SW+Langer+Dr,+Sherwood,+OR+97140" target="_blank"
+                                class="action-chip primary">
                                 <i class="fas fa-directions"></i>
                                 Directions
                             </a>
@@ -2726,18 +2738,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="location-visual">
                     <div class="map-container-modern">
-                        <iframe 
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.1234567890123!2d-122.8417!3d45.3584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDIxJzMwLjIiTiAxMjLCsDUwJzMwLjEiVw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                            width="100%" 
-                            height="400" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Sultan The Flaming Tandoor Location">
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Sultan The Flaming Tandoor Location">
                         </iframe>
                         <div class="map-status-overlay">
                             <div class="status-indicator-map">
@@ -2755,7 +2762,7 @@
                     <h3>Operating Hours</h3>
                     <div class="hours-subtitle">We're here to serve you authentic flavors</div>
                 </div>
-                
+
                 <div class="hours-grid-modern">
                     <div class="hours-card today-card" id="today-card">
                         <div class="card-header">
@@ -2843,7 +2850,7 @@
                         <span class="service-desc">Full restaurant experience</span>
                     </div>
                 </div>
-                
+
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-shopping-bag"></i>
@@ -2853,7 +2860,7 @@
                         <span class="service-desc">Quick pickup available</span>
                     </div>
                 </div>
-                
+
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-truck"></i>
@@ -2863,7 +2870,7 @@
                         <span class="service-desc">Via partner platforms</span>
                     </div>
                 </div>
-                
+
                 <div class="service-item">
                     <div class="service-icon">
                         <i class="fas fa-users"></i>
@@ -2884,14 +2891,17 @@
                 <div class="section-badge">Get in Touch</div>
                 <h2 class="section-title">Visit Us Today</h2>
                 <p class="section-description">
-                    Come experience authentic flavors in our warm, welcoming atmosphere or order online for pickup and delivery.
+                    Come experience authentic flavors in our warm, welcoming atmosphere or order online for pickup and
+                    delivery.
                 </p>
             </div>
-            
+
             <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right">
-                    <h3 style="margin-bottom: 2rem; color: var(--secondary); font-family: 'Playfair Display', serif; font-size: 2rem;">Restaurant Information</h3>
-                    
+                    <h3
+                        style="margin-bottom: 2rem; color: var(--secondary); font-family: 'Playfair Display', serif; font-size: 2rem;">
+                        Restaurant Information</h3>
+
                     <div class="info-item">
                         <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -2899,12 +2909,13 @@
                         <div>
                             <h4>Address</h4>
                             <p>16370 SW Langer Dr<br>Sherwood, OR 97140</p>
-                            <a href="https://maps.google.com/?q=16370+SW+Langer+Dr,+Sherwood,+OR+97140" target="_blank" style="color: var(--primary); font-weight: 600; text-decoration: none;">
+                            <a href="https://maps.google.com/?q=16370+SW+Langer+Dr,+Sherwood,+OR+97140" target="_blank"
+                                style="color: var(--primary); font-weight: 600; text-decoration: none;">
                                 <i class="fas fa-external-link-alt"></i> View on Google Maps
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="info-item">
                         <div class="info-icon">
                             <i class="fas fa-phone"></i>
@@ -2915,7 +2926,7 @@
                             <small style="color: var(--text-light);">Call for reservations & catering</small>
                         </div>
                     </div>
-                    
+
                     <div class="info-item">
                         <div class="info-icon">
                             <i class="fas fa-clock"></i>
@@ -2924,16 +2935,16 @@
                             <h4>Hours</h4>
                             <div class="hours-display">
                                 <div class="current-status">
-                                    <span id="restaurant-status" class="status-indicator">Checking...</span>
                                 </div>
-                                <div class="hours-list" style="margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.4;">
+                                <div class="hours-list"
+                                    style="margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.4;">
                                     <div><strong>Mon:</strong> Closed</div>
                                     <div><strong>Tue-Sun:</strong> 11:00 AM - 9:00 PM</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="info-item">
                         <div class="info-icon">
                             <i class="fas fa-globe"></i>
@@ -2943,41 +2954,46 @@
                             <p><a href="https://sultanpdx.com" target="_blank">sultanpdx.com</a></p>
                         </div>
                     </div>
-                    
+
                     <div style="margin-top: 2rem;">
-                        <a href="#" class="btn btn-primary" onclick="openOrderModal()" style="width: 100%; justify-content: center; text-decoration: none; margin-bottom: 1rem;">
+                        <a href="#" class="btn btn-primary" onclick="openOrderModal()"
+                            style="width: 100%; justify-content: center; text-decoration: none; margin-bottom: 1rem;">
                             <i class="fas fa-shopping-cart"></i> Order Online Now
                         </a>
-                        <a href="tel:+15036101262" class="btn btn-secondary" style="width: 100%; justify-content: center; text-decoration: none; background: var(--secondary); color: white;">
+                        <a href="tel:+15036101262" class="btn btn-secondary"
+                            style="width: 100%; justify-content: center; text-decoration: none; background: var(--secondary); color: white;">
                             <i class="fas fa-phone"></i> Call Now
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form" data-aos="fade-left">
-                    <h3 style="margin-bottom: 2rem; color: var(--secondary); font-family: 'Playfair Display', serif; font-size: 2rem;">Send us a Message</h3>
-                    
+                    <h3
+                        style="margin-bottom: 2rem; color: var(--secondary); font-family: 'Playfair Display', serif; font-size: 2rem;">
+                        Send us a Message</h3>
+
                     <form id="contactForm" onsubmit="handleContactSubmit(event)">
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="phone">Phone</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your inquiry - catering, large parties, special requests..."></textarea>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Tell us about your inquiry - catering, large parties, special requests..."></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
@@ -2993,12 +3009,14 @@
             <div class="footer-grid">
                 <div class="footer-section">
                     <h3>Sultan The Flaming Tandoor</h3>
-                    <p>Authentic Indian and Pakistani cuisine in the heart of Sherwood, Oregon. Experience the flavors of South Asia with our traditional recipes and modern hospitality.</p>
+                    <p>Authentic Indian and Pakistani cuisine in the heart of Sherwood, Oregon. Experience the flavors
+                        of South Asia with our traditional recipes and modern hospitality.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/sultanpdx/" target="_blank" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.yelp.com/biz/sultan-the-flaming-tandoor-sherwood" target="_blank" aria-label="Yelp">
+                        <a href="https://www.yelp.com/biz/sultan-the-flaming-tandoor-sherwood" target="_blank"
+                            aria-label="Yelp">
                             <i class="fab fa-yelp"></i>
                         </a>
                         <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
@@ -3009,7 +3027,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <p><a href="#home">Home</a></p>
@@ -3018,7 +3036,7 @@
                     <p><a href="#gallery">Gallery</a></p>
                     <p><a href="#contact">Contact</a></p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Services</h3>
                     <p><a href="#" onclick="openOrderModal()">Online Ordering</a></p>
@@ -3026,7 +3044,7 @@
                     <p><a href="#" onclick="openOrderModal()">Gift Cards</a></p>
                     <p><a href="tel:+15036101262">Catering Services</a></p>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Contact Info</h3>
                     <p>16370 SW Langer Dr<br>Sherwood, OR 97140</p>
@@ -3034,15 +3052,16 @@
                     <p>Tue-Sun: 11AM-9PM<br>Monday: Closed</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2024 Sultan The Flaming Tandoor. All rights reserved. | Designed with ❤️ for authentic cuisine lovers</p>
+                <p>&copy; 2025 Sultan The Flaming Tandoor. All rights reserved. | Designed with ❤️ for authentic cuisine
+                    lovers</p>
                 <div class="legal-links">
                     <a href="#" onclick="showTerms()">Terms of Service</a>
                     <span>|</span>
                     <a href="#" onclick="showPrivacy()">Privacy Statement</a>
                     <span>|</span>
-                    <span style="font-size: 0.8rem; color: #666;">Powered by Modern Web Technologies</span>
+                    <span style="font-size: 0.8rem; color: #666;">Powered by Seatech Consulting Inc</span>
                 </div>
             </div>
         </div>
@@ -3051,35 +3070,48 @@
     <!-- Terms Modal -->
     <div class="modal" id="termsModal">
         <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;">
+            <div
+                style="display: flex; justify-content: between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;">
                 <h3 class="modal-title" style="margin: 0;">Terms of Service</h3>
-                <button class="close-modal" onclick="closeTermsModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+                <button class="close-modal" onclick="closeTermsModal()"
+                    style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
             </div>
             <div style="text-align: left; line-height: 1.6; color: var(--text-secondary);">
                 <h4>1. Acceptance of Terms</h4>
-                <p>By accessing and using Sultan The Flaming Tandoor's website and services, you accept and agree to be bound by the terms and provision of this agreement.</p>
-                
+                <p>By accessing and using Sultan The Flaming Tandoor's website and services, you accept and agree to be
+                    bound by the terms and provision of this agreement.</p>
+
                 <h4>2. Restaurant Services</h4>
-                <p>Sultan The Flaming Tandoor provides authentic Indian and Pakistani cuisine through dine-in, takeout, delivery, and catering services. All menu items, prices, and availability are subject to change without notice.</p>
-                
+                <p>Sultan The Flaming Tandoor provides authentic Indian and Pakistani cuisine through dine-in, takeout,
+                    delivery, and catering services. All menu items, prices, and availability are subject to change
+                    without notice.</p>
+
                 <h4>3. Online Ordering</h4>
-                <p>Online orders are processed through third-party platforms. By placing an order, you agree to provide accurate information and payment details. Orders are subject to availability and restaurant hours.</p>
-                
+                <p>Online orders are processed through third-party platforms. By placing an order, you agree to provide
+                    accurate information and payment details. Orders are subject to availability and restaurant hours.
+                </p>
+
                 <h4>4. Reservations</h4>
-                <p>Table reservations are subject to availability. We reserve the right to cancel or modify reservations due to capacity or operational requirements.</p>
-                
+                <p>Table reservations are subject to availability. We reserve the right to cancel or modify reservations
+                    due to capacity or operational requirements.</p>
+
                 <h4>5. Food Allergies & Dietary Restrictions</h4>
-                <p>Please inform our staff of any allergies or dietary restrictions. While we take precautions, we cannot guarantee that our dishes are completely free from allergens due to shared cooking facilities.</p>
-                
+                <p>Please inform our staff of any allergies or dietary restrictions. While we take precautions, we
+                    cannot guarantee that our dishes are completely free from allergens due to shared cooking
+                    facilities.</p>
+
                 <h4>6. Intellectual Property</h4>
-                <p>All content on this website, including images, text, and recipes, is the property of Sultan The Flaming Tandoor and is protected by copyright laws.</p>
-                
+                <p>All content on this website, including images, text, and recipes, is the property of Sultan The
+                    Flaming Tandoor and is protected by copyright laws.</p>
+
                 <h4>7. Limitation of Liability</h4>
-                <p>Sultan The Flaming Tandoor shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.</p>
-                
+                <p>Sultan The Flaming Tandoor shall not be liable for any indirect, incidental, or consequential damages
+                    arising from the use of our services.</p>
+
                 <h4>8. Contact Information</h4>
-                <p>For questions regarding these terms, please contact us at (503) 610-1262 or visit us at 16370 SW Langer Dr, Sherwood, OR 97140.</p>
-                
+                <p>For questions regarding these terms, please contact us at (503) 610-1262 or visit us at 16370 SW
+                    Langer Dr, Sherwood, OR 97140.</p>
+
                 <p><em>Last updated: December 2024</em></p>
             </div>
         </div>
@@ -3088,14 +3120,18 @@
     <!-- Privacy Modal -->
     <div class="modal" id="privacyModal">
         <div class="modal-content" style="max-width: 800px; max-height: 80vh; overflow-y: auto;">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;">
+            <div
+                style="display: flex; justify-content: between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--border); padding-bottom: 1rem;">
                 <h3 class="modal-title" style="margin: 0;">Privacy Statement</h3>
-                <button class="close-modal" onclick="closePrivacyModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+                <button class="close-modal" onclick="closePrivacyModal()"
+                    style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
             </div>
             <div style="text-align: left; line-height: 1.6; color: var(--text-secondary);">
                 <h4>Information We Collect</h4>
-                <p>We collect information you provide directly to us, such as when you make a reservation, place an order, or contact us. This may include your name, phone number, email address, and payment information.</p>
-                
+                <p>We collect information you provide directly to us, such as when you make a reservation, place an
+                    order, or contact us. This may include your name, phone number, email address, and payment
+                    information.</p>
+
                 <h4>How We Use Your Information</h4>
                 <p>We use the information we collect to:</p>
                 <ul>
@@ -3104,25 +3140,31 @@
                     <li>Improve our services and menu offerings</li>
                     <li>Send promotional materials (with your consent)</li>
                 </ul>
-                
+
                 <h4>Information Sharing</h4>
-                <p>We do not sell, trade, or share your personal information with third parties except as necessary to provide our services (e.g., payment processing, delivery services).</p>
-                
+                <p>We do not sell, trade, or share your personal information with third parties except as necessary to
+                    provide our services (e.g., payment processing, delivery services).</p>
+
                 <h4>Data Security</h4>
-                <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-                
+                <p>We implement appropriate security measures to protect your personal information against unauthorized
+                    access, alteration, disclosure, or destruction.</p>
+
                 <h4>Cookies</h4>
-                <p>Our website may use cookies to enhance your browsing experience. You can disable cookies in your browser settings, though some features may not work properly.</p>
-                
+                <p>Our website may use cookies to enhance your browsing experience. You can disable cookies in your
+                    browser settings, though some features may not work properly.</p>
+
                 <h4>Third-Party Services</h4>
-                <p>Our website may contain links to third-party services (ordering platforms, social media). These services have their own privacy policies, and we are not responsible for their practices.</p>
-                
+                <p>Our website may contain links to third-party services (ordering platforms, social media). These
+                    services have their own privacy policies, and we are not responsible for their practices.</p>
+
                 <h4>Your Rights</h4>
-                <p>You have the right to access, update, or delete your personal information. Contact us at (503) 610-1262 to exercise these rights.</p>
-                
+                <p>You have the right to access, update, or delete your personal information. Contact us at (503)
+                    610-1262 to exercise these rights.</p>
+
                 <h4>Contact Us</h4>
-                <p>If you have questions about this privacy statement, please contact Sultan The Flaming Tandoor at (503) 610-1262 or visit us at 16370 SW Langer Dr, Sherwood, OR 97140.</p>
-                
+                <p>If you have questions about this privacy statement, please contact Sultan The Flaming Tandoor at
+                    (503) 610-1262 or visit us at 16370 SW Langer Dr, Sherwood, OR 97140.</p>
+
                 <p><em>Last updated: December 2024</em></p>
             </div>
         </div>
@@ -3142,8 +3184,9 @@
                         <div style="font-size: 0.9rem; color: var(--text-light);">Pickup & Delivery via Toast</div>
                     </div>
                 </a>
-                
-                <a href="https://www.opentable.com/r/sultan-the-flaming-tandoor-sherwood" target="_blank" class="modal-option">
+
+                <a href="https://www.opentable.com/r/sultan-the-flaming-tandoor-sherwood" target="_blank"
+                    class="modal-option">
                     <div class="modal-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
@@ -3152,7 +3195,7 @@
                         <div style="font-size: 0.9rem; color: var(--text-light);">Book via OpenTable</div>
                     </div>
                 </a>
-                
+
                 <a href="https://sultanpdx.com/order" target="_blank" class="modal-option">
                     <div class="modal-icon">
                         <i class="fas fa-gift"></i>
@@ -3170,48 +3213,48 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
-    
+
     <script>
         // Menu data with individual item images and enhanced details
         const menuData = {
             appetizers: {
                 icon: 'fas fa-utensils',
                 items: [
-                    { 
-                        name: 'Aloo Tikki Chaat', 
-                        description: 'Crispy potato patties topped with yogurt, mint chutney, and tamarind sauce', 
+                    {
+                        name: 'Aloo Tikki Chaat',
+                        description: 'Crispy potato patties topped with yogurt, mint chutney, and tamarind sauce',
                         price: '$11',
                         image: 'assets/Aloo Tikki Chaat.png',
                         tags: ['Vegetarian', 'Popular', 'Street Food'],
                         rating: 4.8
                     },
-                    { 
-                        name: 'Chicken 65', 
-                        description: 'Deep-fried chicken pieces tossed in tangy spicy red chili sauce', 
+                    {
+                        name: 'Chicken 65',
+                        description: 'Deep-fried chicken pieces tossed in tangy spicy red chili sauce',
                         price: '$15',
                         image: 'assets/Chicken 65.jpg',
                         tags: ['Spicy', 'Signature', 'South Indian'],
                         rating: 4.9
                     },
-                    { 
-                        name: 'Vegetable Samosa', 
-                        description: 'Golden crispy pastry stuffed with spiced potatoes, peas & herbs', 
+                    {
+                        name: 'Vegetable Samosa',
+                        description: 'Golden crispy pastry stuffed with spiced potatoes, peas & herbs',
                         price: '$7',
                         image: 'assets/Vegetable Samosa.png',
                         tags: ['Vegetarian', 'Classic', 'Crispy'],
                         rating: 4.7
                     },
-                    { 
-                        name: 'Paneer Pakora', 
-                        description: 'Fresh Indian cheese cubes in spiced chickpea batter, deep-fried to perfection', 
+                    {
+                        name: 'Paneer Pakora',
+                        description: 'Fresh Indian cheese cubes in spiced chickpea batter, deep-fried to perfection',
                         price: '$10',
                         image: 'assets/Paneer Pakora.jpg',
                         tags: ['Vegetarian', 'Cheese', 'Crispy'],
                         rating: 4.6
                     },
-                    { 
-                        name: 'Onion Bhaji', 
-                        description: 'Thinly sliced onions in aromatic chickpea flour batter', 
+                    {
+                        name: 'Onion Bhaji',
+                        description: 'Thinly sliced onions in aromatic chickpea flour batter',
                         price: '$9',
                         image: 'assets/Onion Bhaji.jpg',
                         tags: ['Vegetarian', 'Traditional', 'Crunchy'],
@@ -3222,41 +3265,41 @@
             tandoori: {
                 icon: 'fas fa-fire',
                 items: [
-                    { 
-                        name: 'Mixed Grill', 
-                        description: 'Afghani malai tikka, chicken tikka, tandoori chicken, lamb seekh kebab & lamb chops', 
+                    {
+                        name: 'Mixed Grill',
+                        description: 'Afghani malai tikka, chicken tikka, tandoori chicken, lamb seekh kebab & lamb chops',
                         price: '$35',
                         image: 'assets/Mixed Vegetable Masala.jpg',
                         tags: ['Signature', 'Premium', 'Mixed Platter'],
                         rating: 4.9
                     },
-                    { 
-                        name: 'Chicken Tikka Kebab', 
-                        description: 'Tender boneless chicken marinated in aromatic tandoori spices', 
+                    {
+                        name: 'Chicken Tikka Kebab',
+                        description: 'Tender boneless chicken marinated in aromatic tandoori spices',
                         price: '$16',
                         image: 'assets/Chicken Tikka Kebab.png',
                         tags: ['Popular', 'Grilled', 'Protein'],
                         rating: 4.8
                     },
-                    { 
-                        name: 'Afghani Malai Tikka', 
-                        description: 'Succulent chicken pieces in rich spiced cream marinade', 
+                    {
+                        name: 'Afghani Malai Tikka',
+                        description: 'Succulent chicken pieces in rich spiced cream marinade',
                         price: '$16',
                         image: 'assets/Afghani Malai Tikka Kebab.png',
                         tags: ['Creamy', 'Premium', 'Mild'],
                         rating: 4.9
                     },
-                    { 
-                        name: 'Lamb Chops', 
-                        description: 'Tender bone-in lamb chops marinated in tandoori spices (6 pieces)', 
+                    {
+                        name: 'Lamb Chops',
+                        description: 'Tender bone-in lamb chops marinated in tandoori spices (6 pieces)',
                         price: '$30',
                         image: 'assets/Lamb Chops.jpg',
                         tags: ['Premium', 'Juicy', 'Bone-in'],
                         rating: 4.7
                     },
-                    { 
-                        name: 'Full Plate Tandoori Chicken', 
-                        description: 'Whole chicken leg quarters marinated in traditional tandoori spices', 
+                    {
+                        name: 'Full Plate Tandoori Chicken',
+                        description: 'Whole chicken leg quarters marinated in traditional tandoori spices',
                         price: '$22',
                         image: 'assets/Full Plate Tandoori Chicken.jpg',
                         tags: ['Traditional', 'Full Meal', 'Smoky'],
@@ -3267,41 +3310,41 @@
             curries: {
                 icon: 'fas fa-bowl-food',
                 items: [
-                    { 
-                        name: 'Butter Masala', 
-                        description: 'Rich tomato sauce with cream & butter - choose your protein', 
+                    {
+                        name: 'Butter Masala',
+                        description: 'Rich tomato sauce with cream & butter - choose your protein',
                         price: '$17',
                         image: 'assets/Butter Masala.jpg',
                         tags: ['Creamy', 'Popular', 'Rich'],
                         rating: 4.9
                     },
-                    { 
-                        name: 'Tikka Masala', 
-                        description: 'Tangy tomato sauce with onions, bell peppers & cream', 
+                    {
+                        name: 'Tikka Masala',
+                        description: 'Tangy tomato sauce with onions, bell peppers & cream',
                         price: '$17',
                         image: 'assets/Tikka Masala.png',
                         tags: ['Signature', 'Tangy', 'Bell Peppers'],
                         rating: 4.8
                     },
-                    { 
-                        name: 'Saagwala', 
-                        description: 'Creamy spinach & greens curry with garlic & aromatic spices', 
+                    {
+                        name: 'Saagwala',
+                        description: 'Creamy spinach & greens curry with garlic & aromatic spices',
                         price: '$17',
                         image: 'assets/Saagwala.jpg',
                         tags: ['Healthy', 'Spinach', 'Nutritious'],
                         rating: 4.6
                     },
-                    { 
-                        name: 'Karahi', 
-                        description: 'Traditional wok-style curry with onions, tomatoes, bell peppers & spices', 
+                    {
+                        name: 'Karahi',
+                        description: 'Traditional wok-style curry with onions, tomatoes, bell peppers & spices',
                         price: '$17',
                         image: 'assets/Karahi.jpg',
                         tags: ['Traditional', 'Wok-style', 'Aromatic'],
                         rating: 4.7
                     },
-                    { 
-                        name: 'Vindaloo', 
-                        description: 'Fiery red chili curry with potatoes & vinegar - very spicy!', 
+                    {
+                        name: 'Vindaloo',
+                        description: 'Fiery red chili curry with potatoes & vinegar - very spicy!',
                         price: '$17',
                         image: 'assets/Vindaloo.png',
                         tags: ['Very Spicy', 'Goan Style', 'Hot'],
@@ -3312,41 +3355,41 @@
             biryani: {
                 icon: 'fas fa-seedling',
                 items: [
-                    { 
-                        name: 'Chicken Biryani', 
-                        description: 'Aromatic basmati rice layered with tender chicken and biryani spices', 
+                    {
+                        name: 'Chicken Biryani',
+                        description: 'Aromatic basmati rice layered with tender chicken and biryani spices',
                         price: '$19',
                         image: 'assets/Chicken Biryani.jpg',
                         tags: ['Signature', 'Aromatic', 'Rice Dish'],
                         rating: 4.9
                     },
-                    { 
-                        name: 'Goat Biryani', 
-                        description: 'Premium bone-in goat meat layered with fragrant basmati rice', 
+                    {
+                        name: 'Goat Biryani',
+                        description: 'Premium bone-in goat meat layered with fragrant basmati rice',
                         price: '$22',
                         image: 'assets/Goat Biryani.jpg',
                         tags: ['Premium', 'Bone-in', 'Traditional'],
                         rating: 4.8
                     },
-                    { 
-                        name: 'Chicken Tikka Biryani', 
-                        description: 'Tandoori chicken tikka pieces layered with spiced basmati rice', 
+                    {
+                        name: 'Chicken Tikka Biryani',
+                        description: 'Tandoori chicken tikka pieces layered with spiced basmati rice',
                         price: '$22',
                         image: 'assets/Chicken Tikka Biryani.jpg',
                         tags: ['Fusion', 'Tandoori', 'Special'],
                         rating: 4.8
                     },
-                    { 
-                        name: 'Vegetable Biryani', 
-                        description: 'Colorful mixed vegetables with aromatic basmati rice and biryani spices', 
+                    {
+                        name: 'Vegetable Biryani',
+                        description: 'Colorful mixed vegetables with aromatic basmati rice and biryani spices',
                         price: '$17',
                         image: 'assets/Vegetable Biryani.jpg',
                         tags: ['Vegetarian', 'Colorful', 'Healthy'],
                         rating: 4.6
                     },
-                    { 
-                        name: 'Paneer Biryani', 
-                        description: 'Fresh Indian cheese cubes with fragrant basmati rice and spices', 
+                    {
+                        name: 'Paneer Biryani',
+                        description: 'Fresh Indian cheese cubes with fragrant basmati rice and spices',
                         price: '$19',
                         image: 'assets/Paneer Biryani.jpg',
                         tags: ['Vegetarian', 'Cheese', 'Aromatic'],
@@ -3357,41 +3400,41 @@
             vegetarian: {
                 icon: 'fas fa-leaf',
                 items: [
-                    { 
-                        name: 'Aloo Gobi Masala', 
-                        description: 'Cauliflower and potatoes cooked with ginger, garlic & aromatic spices', 
+                    {
+                        name: 'Aloo Gobi Masala',
+                        description: 'Cauliflower and potatoes cooked with ginger, garlic & aromatic spices',
                         price: '$17',
                         image: 'assets/Aloo Gobi Masala.png',
                         tags: ['Vegan', 'Healthy', 'Traditional'],
                         rating: 4.6
                     },
-                    { 
-                        name: 'Chaana Masala', 
-                        description: 'Chickpeas simmered in rich tomato sauce with onions & spices', 
+                    {
+                        name: 'Chaana Masala',
+                        description: 'Chickpeas simmered in rich tomato sauce with onions & spices',
                         price: '$17',
                         image: 'assets/Chaana Masala.png',
                         tags: ['Vegan', 'Protein Rich', 'Popular'],
                         rating: 4.7
                     },
-                    { 
-                        name: 'Malai Kofta', 
-                        description: 'Potato and paneer dumplings in rich, creamy cashew sauce', 
+                    {
+                        name: 'Malai Kofta',
+                        description: 'Potato and paneer dumplings in rich, creamy cashew sauce',
                         price: '$18',
                         image: 'assets/Malai Kofta.png',
                         tags: ['Creamy', 'Dumplings', 'Rich'],
                         rating: 4.8
                     },
-                    { 
-                        name: 'Dahl Makhni', 
-                        description: 'Black lentils & kidney beans slow-cooked with butter & cream', 
+                    {
+                        name: 'Dahl Makhni',
+                        description: 'Black lentils & kidney beans slow-cooked with butter & cream',
                         price: '$17',
                         image: 'assets/Dahl Makhni.jpg',
                         tags: ['Creamy', 'Lentils', 'Comfort Food'],
                         rating: 4.9
                     },
-                    { 
-                        name: 'Baingan Bharta', 
-                        description: 'Smoky roasted eggplant mashed with onions, tomatoes & spices', 
+                    {
+                        name: 'Baingan Bharta',
+                        description: 'Smoky roasted eggplant mashed with onions, tomatoes & spices',
                         price: '$17',
                         image: 'assets/Baingan Bharta.jpg',
                         tags: ['Smoky', 'Eggplant', 'Healthy'],
@@ -3432,14 +3475,14 @@
         });
 
         // Loading screen
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             setTimeout(() => {
                 document.getElementById('loading').classList.add('hidden');
             }, 1500);
         });
 
         // Navbar scroll effect
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
@@ -3452,7 +3495,7 @@
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
             const menuIcon = document.getElementById('menu-icon');
-            
+
             mobileMenu.classList.toggle('active');
             if (mobileMenu.classList.contains('active')) {
                 menuIcon.className = 'fas fa-times';
@@ -3471,7 +3514,7 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    
+
                     // Update active nav link
                     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
                     if (this.classList.contains('nav-link')) {
@@ -3486,7 +3529,7 @@
             // Update filter buttons
             document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            
+
             // Render menu
             renderMenu(category);
         }
@@ -3494,20 +3537,20 @@
         function renderMenu(category = 'all') {
             const menuGrid = document.getElementById('menuGrid');
             menuGrid.innerHTML = '';
-            
-            const categoriesToShow = category === 'all' 
-                ? Object.keys(menuData) 
+
+            const categoriesToShow = category === 'all'
+                ? Object.keys(menuData)
                 : [category];
-            
+
             categoriesToShow.forEach(cat => {
                 if (menuData[cat]) {
                     // Create category section
                     const categorySection = document.createElement('div');
                     categorySection.className = 'category-section';
                     categorySection.setAttribute('data-aos', 'fade-up');
-                    
+
                     const categoryTitle = cat.charAt(0).toUpperCase() + cat.slice(1);
-                    
+
                     // Category header
                     const categoryHeader = document.createElement('div');
                     categoryHeader.className = 'category-header';
@@ -3517,18 +3560,18 @@
                         </div>
                         <h3 class="category-title-main">${categoryTitle}</h3>
                     `;
-                    
+
                     // Items grid
                     const itemsGrid = document.createElement('div');
                     itemsGrid.className = 'menu-grid';
-                    
+
                     menuData[cat].items.forEach(item => {
                         const itemCard = document.createElement('div');
                         itemCard.className = 'menu-item-card';
                         itemCard.setAttribute('data-aos', 'fade-up');
-                        
+
                         const stars = '★'.repeat(Math.floor(item.rating)) + (item.rating % 1 ? '☆' : '');
-                        
+
                         itemCard.innerHTML = `
                             <div style="position: relative; overflow: hidden;">
                                 <img src="${item.image}" alt="${item.name}" class="menu-item-image">
@@ -3540,7 +3583,7 @@
                                 <div class="menu-item-tags">
                                     ${item.tags.map(tag => `<span class="menu-tag">${tag}</span>`).join('')}
                                 </div>
-                                <div class="menu-item-footer">
+                                <div class="menu-item-fbuttonooter">
                                     <div class="rating-stars" title="Rating: ${item.rating}/5">
                                         ${stars} <span style="color: var(--text-light); font-size: 0.8rem;">(${item.rating})</span>
                                     </div>
@@ -3550,16 +3593,16 @@
                                 </div>
                             </div>
                         `;
-                        
+
                         itemsGrid.appendChild(itemCard);
                     });
-                    
+
                     categorySection.appendChild(categoryHeader);
                     categorySection.appendChild(itemsGrid);
                     menuGrid.appendChild(categorySection);
                 }
             });
-            
+
             // Refresh AOS for new elements
             AOS.refresh();
         }
@@ -3586,9 +3629,9 @@
                     Use "Order Now" button to place your order
                 </div>
             `;
-            
+
             document.body.appendChild(notification);
-            
+
             setTimeout(() => {
                 notification.style.animation = 'slideOutRight 0.3s ease';
                 setTimeout(() => {
@@ -3620,7 +3663,7 @@
         }
 
         // Close modal when clicking outside
-        document.getElementById('orderModal').addEventListener('click', function(e) {
+        document.getElementById('orderModal').addEventListener('click', function (e) {
             if (e.target === this) {
                 closeOrderModal();
             }
@@ -3629,18 +3672,18 @@
         // Contact form submission
         function handleContactSubmit(e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData);
-            
+
             // Simulate form submission
             const submitBtn = e.target.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
+
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
+
             setTimeout(() => {
                 alert(`Thank you ${data.name}! We've received your message and will get back to you soon.`);
                 e.target.reset();
@@ -3650,15 +3693,15 @@
         }
 
         // Initialize menu on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             renderMenu();
-            
+
             // Add intersection observer for scroll animations
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -3666,17 +3709,17 @@
                     }
                 });
             }, observerOptions);
-            
+
             document.querySelectorAll('.reveal').forEach(el => {
                 observer.observe(el);
             });
         });
 
         // Keyboard navigation for accessibility
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeOrderModal();
-                
+
                 // Close mobile menu if open
                 const mobileMenu = document.getElementById('mobileMenu');
                 if (mobileMenu.classList.contains('active')) {
@@ -3687,7 +3730,7 @@
 
         // Add click-to-call functionality for phone numbers
         document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-            link.addEventListener('click', function(e) {
+            link.addEventListener('click', function (e) {
                 if (!('ontouchstart' in window)) {
                     // On desktop, show a confirmation
                     if (!confirm(`Call ${this.textContent}?`)) {
@@ -3698,10 +3741,10 @@
         });
 
         // Parallax effect for hero sections
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('.slide-bg');
-            
+
             parallaxElements.forEach(element => {
                 const speed = 0.5;
                 const yPos = -(scrolled * speed);
@@ -3711,7 +3754,7 @@
 
         // Add loading animation to buttons
         document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 if (!this.classList.contains('loading')) {
                     this.classList.add('loading');
                     setTimeout(() => {
@@ -3760,12 +3803,12 @@
 
         // Add hover effects for interactive elements
         document.querySelectorAll('.menu-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
+            item.addEventListener('mouseenter', function () {
                 this.style.transform = 'translateX(10px)';
                 this.style.backgroundColor = 'rgba(212, 175, 55, 0.05)';
             });
-            
-            item.addEventListener('mouseleave', function() {
+
+            item.addEventListener('mouseleave', function () {
                 this.style.transform = 'translateX(0)';
                 this.style.backgroundColor = 'transparent';
             });
@@ -3784,7 +3827,7 @@
         function updatePricing() {
             const now = new Date();
             const hour = now.getHours();
-            
+
             // Happy hour pricing example (3-5 PM)
             if (hour >= 15 && hour < 17) {
                 document.querySelectorAll('.item-price').forEach(price => {
@@ -3798,7 +3841,7 @@
 
         // Initialize special features
         updatePricing();
-        
+
         // Update pricing every hour
         setInterval(updatePricing, 3600000);
 
@@ -3807,16 +3850,16 @@
             const now = new Date();
             const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
             const hour = now.getHours();
-            
+
             let isOpen = false;
-            
+
             // Restaurant hours: Tuesday-Sunday 11AM-9PM, Monday closed
             if (day !== 1) { // Not Monday
                 if (hour >= 11 && hour < 21) { // 11 AM to 9 PM
                     isOpen = true;
                 }
             }
-            
+
             const statusElement = document.querySelector('.restaurant-status');
             if (statusElement) {
                 statusElement.textContent = isOpen ? 'Open Now' : 'Closed';
@@ -3826,7 +3869,7 @@
 
         // Initialize restaurant status
         updateRestaurantStatus();
-        
+
         // Update status every minute
         setInterval(updateRestaurantStatus, 60000);
 
@@ -3850,7 +3893,7 @@
             });
         });
     </script>
-    
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -3903,4 +3946,5 @@
     }
     </script>
 </body>
+
 </html>
