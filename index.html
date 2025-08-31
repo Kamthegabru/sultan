@@ -5,19 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17352362994"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17352362994');
+    </script>
+
     <title>Sultan: Best Indian & Pakistani Food in Sherwood, OR | Tandoori, Curry & Halal</title>
-    
+
     <meta name="description"
         content="Discover the best authentic Indian & Pakistani food in Sherwood, OR at Sultan The Flaming Tandoor. Serving Tigard, Tualatin & Wilsonville. Enjoy fresh Halal tandoori, biryani, curries & naan. Order online, dine-in, or cater your next event.">
-    
+
     <meta name="keywords"
         content="Indian restaurant Sherwood OR, Pakistani restaurant Sherwood OR, best Indian food Tualatin, Pakistani food Tigard, Halal food Sherwood, Tandoori chicken, biryani, chicken tikka masala, garlic naan, samosa, curry, restaurant near me, Indian food delivery, Pakistani catering, Wilsonville, Washington County, best south asian cuisine">
 
     <link rel="canonical" href="https://www.sultanpdx.com/">
 
     <meta property="og:title" content="Sultan: Best Indian & Pakistani Food in Sherwood, OR">
-    <meta property="og:description" content="Discover authentic Halal Indian & Pakistani cuisine at Sultan The Flaming Tandoor. Serving Sherwood, Tigard, Tualatin & Wilsonville.">
-    <meta property="og:image" content="https://www.sultanpdx.com/assets/slider1.png"> 
+    <meta property="og:description"
+        content="Discover authentic Halal Indian & Pakistani cuisine at Sultan The Flaming Tandoor. Serving Sherwood, Tigard, Tualatin & Wilsonville.">
+    <meta property="og:image" content="https://www.sultanpdx.com/assets/slider1.png">
     <meta property="og:url" content="https://www.sultanpdx.com/">
     <meta property="og:type" content="website">
 
@@ -99,209 +110,1396 @@
             --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
             --gradient: linear-gradient(135deg, var(--primary), var(--primary-dark));
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-primary); background: var(--bg-primary); overflow-x: hidden; }
-        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(254, 254, 254, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(229, 231, 235, 0.5); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .navbar.scrolled { background: rgba(254, 254, 254, 0.98); box-shadow: var(--shadow-lg); }
-        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 80px; }
-        .logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-        .logo-icon { width: 120px; height: 120px; transition: all 0.3s ease; }
-        .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
-        .nav-links { display: none; list-style: none; gap: 2rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; transition: all 0.3s ease; position: relative; padding: 0.5rem 0; }
-        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background: var(--gradient); transition: width 0.3s ease; }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-        .header-actions { display: flex; align-items: center; gap: 1rem; }
-        .order-btn { background: var(--gradient); color: white; border: 2px solid transparent; padding: 12px 24px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: var(--shadow); white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 1rem; }
-        .order-btn:hover { transform: translateY(-2px) scale(1.05); box-shadow: var(--shadow-lg); }
-        .order-btn.secondary { background: transparent; color: var(--primary); border-color: var(--primary); box-shadow: none; }
-        .order-btn.secondary:hover { background: var(--primary); color: white; box-shadow: var(--shadow); }
-        .mobile-menu-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-primary); z-index: 1001; padding: 0.5rem; }
-        .hero-slider { height: 100vh; position: relative; overflow: hidden; padding: 0; }
-        .hero-slider .swiper { width: 100%; height: 100%; }
-        .swiper-slide { display: flex; align-items: center; justify-content: center; padding: 0 2rem; }
-        .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-        .slide-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(139, 21, 56, 0.4) 50%, rgba(212, 175, 55, 0.3) 100%); z-index: -1; }
-        .slide-content { text-align: center; color: white; max-width: 800px; padding: 2rem; z-index: 1; }
-        .slide-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px 24px; border-radius: 50px; font-size: 1rem; font-weight: 500; margin-bottom: 2rem; }
-        .slide-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff, #f0f0f0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .slide-description { font-size: 1.2rem; line-height: 1.8; margin-bottom: 2.5rem; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin-left: auto; margin-right: auto; }
-        .slide-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; border: none; white-space: nowrap; }
-        .btn-primary { background: var(--gradient); color: white; box-shadow: var(--shadow); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-        .btn-secondary { background: rgba(255, 255, 255, 0.15); color: white; border: 2px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); }
-        .btn-secondary.outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); backdrop-filter: none; }
-        .btn-secondary:hover { background: rgba(255, 255, 255, 0.25); border-color: rgba(255, 255, 255, 0.5); transform: translateY(-2px); }
-        .btn-secondary.outline:hover { background: var(--primary); color: white; }
-        section { padding: 80px 0; }
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-badge { display: inline-block; background: var(--gradient); color: white; padding: 10px 24px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); }
-        .section-description { font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.8; }
-        #menu { padding-top: 0; }
-        .menu { background: linear-gradient(135deg, var(--bg-secondary) 0%, #f1f3f4 100%); }
-        .menu-filters { display: flex; justify-content: center; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap; }
-        .filter-btn { background: white; border: 2px solid var(--border); padding: 12px 24px; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; font-weight: 600; font-size: 0.95rem; }
-        .filter-btn.active, .filter-btn:hover { background: var(--gradient); color: white; border-color: transparent; transform: translateY(-2px); box-shadow: var(--shadow); }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
-        .menu-item-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid transparent; position: relative; display: flex; flex-direction: column; }
-        .menu-item-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: var(--shadow-lg); border-color: var(--primary); }
-        .menu-item-image { width: 100%; height: 220px; object-fit: cover; transition: all 0.4s ease; }
-        .menu-item-card:hover .menu-item-image { transform: scale(1.08); }
-        .menu-item-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .menu-item-title { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; }
-        .menu-item-price { font-size: 1.3rem; font-weight: 800; color: var(--primary); position: absolute; top: 15px; right: 15px; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); padding: 8px 16px; border-radius: 25px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); }
-        .menu-item-description { color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; font-size: 0.9rem; flex-grow: 1; }
-        .category-section { margin-bottom: 4rem; width: 100%; }
-        .category-header { text-align: center; margin-bottom: 3rem; }
-        .category-title-main { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--secondary); }
-        .features { background: linear-gradient(135deg, #ffffff 0%, var(--bg-secondary) 100%); padding: 80px 0; }
-        .interactive-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .feature-interactive-card { position: relative; height: 400px; border-radius: 20px; overflow: hidden; cursor: pointer; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease; box-shadow: var(--shadow); }
-        .feature-interactive-card:hover { transform: scale(1.05); box-shadow: var(--shadow-lg); }
-        .feature-bg-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
-        .feature-interactive-card:hover .feature-bg-image { transform: scale(1.1); }
-        .feature-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, transparent 100%); padding: 1.5rem; display: flex; flex-direction: column; justify-content: flex-end; color: white; transition: background 0.4s ease; }
-        .feature-interactive-card:hover .feature-overlay { background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 100%); }
-        .feature-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .feature-description { font-size: 0.95rem; line-height: 1.5; opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.4s ease, max-height 0.4s ease; }
-        .feature-interactive-card:hover .feature-description { opacity: 1; max-height: 100px; }
-        .giftcard { background: var(--bg-secondary); }
-        .giftcard-content-area { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; max-width: 1100px; margin: 0 auto; background: white; border-radius: 24px; padding: 2rem; box-shadow: var(--shadow-lg); }
-        .giftcard-image img { width: 100%; height: auto; border-radius: 16px; }
-        .giftcard-text h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--secondary); margin-bottom: 1rem; }
-        .giftcard-text p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; }
-        .gallery { background: #1a1a1a; color: white; }
-        .gallery .section-badge { background: rgba(205, 51, 51, 0.2); color: var(--primary); }
-        .gallery .section-title, .gallery .section-description { color: white; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; }
-        .gallery-item { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; transition: all 0.3s ease; }
-        .gallery-item:hover { transform: scale(1.03); box-shadow: var(--shadow-lg); }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
-        .gallery-item:hover img { transform: scale(1.1); }
-        .gallery-overlay { position: absolute;inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); display: flex; align-items: end; padding: 2rem; color: white; font-weight: 600; }
-        .contact { background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%); }
-        .contact-location-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
-        .contact-info-col > *:last-child { margin-bottom: 0; }
-        .location-address h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight: 800; color: var(--secondary); margin-bottom: 1.5rem; }
-        .address-line { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; font-size: 1.2rem; }
-        .address-line i { font-size: 1.5rem; color: var(--primary); background: rgba(205, 51, 51, 0.1); padding: 12px; border-radius: 50%; }
-        .location-actions-inline { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .action-chip { display: flex; align-items: center; gap: 0.8rem; padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: 700; transition: all 0.3s ease; border: none; cursor: pointer; }
-        .action-chip.primary { background: var(--gradient); color: white; box-shadow: 0 8px 25px rgba(205, 51, 51, 0.25); }
-        .action-chip.primary:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(205, 51, 51, 0.35); }
-        .action-chip.secondary { background: var(--secondary); color: white; box-shadow: 0 8px 25px rgba(139, 21, 56, 0.25); }
-        .action-chip.secondary:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(139, 21, 56, 0.35); }
-        .map-container-modern { position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); border: 3px solid rgba(205, 51, 51, 0.1); height: 400px; margin-bottom: 2.5rem; }
-        .map-status-overlay { position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); padding: 12px 20px; border-radius: 50px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(205, 51, 51, 0.3); }
-        .status-indicator-map { display: flex; align-items: center; gap: 0.8rem; font-weight: 700; color: var(--text-primary); }
-        .status-dot-animated { width: 12px; height: 12px; border-radius: 50%; background: #28a745; animation: statusPulse 2s infinite; box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
-        .status-dot-animated.closed { background: #dc3545; animation: none; box-shadow: none; }
-        @keyframes statusPulse { 0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); } 100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); } }
-        .hours-header { text-align: center; margin-bottom: 2rem; }
-        .hours-header h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 800; color: var(--secondary); margin-bottom: 0.5rem; }
-        .hours-grid-modern { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-        .hours-card { background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9)); backdrop-filter: blur(20px); border-radius: 24px; padding: 2rem; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08); border: 1px solid rgba(205, 51, 51, 0.15); }
-        .card-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid rgba(205, 51, 51, 0.2); }
-        .card-header i { font-size: 1.5rem; color: var(--primary); background: rgba(205, 51, 51, 0.1); padding: 12px; border-radius: 50%; }
-        .card-title { font-size: 1.3rem; font-weight: 700; color: var(--text-primary); }
-        .today-card { background: var(--gradient); color: white; border: none; }
-        .today-card .card-header { border-bottom-color: rgba(255, 255, 255, 0.3); }
-        .today-card .card-header i { background: rgba(255, 255, 255, 0.2); color: white; }
-        .today-card .card-title { color: white; }
-        .hours-display-large { text-align: center; }
-        .hours-time { display: block; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
-        .hours-status { font-size: 1.1rem; font-weight: 600; opacity: 0.9; }
-        .week-hours { display: flex; flex-direction: column; gap: 0.5rem; }
-        .day-row { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem; background: rgba(255, 255, 255, 0.7); border-radius: 12px; }
-        .day-row.today { background: rgba(205, 51, 51, 0.2); border-left: 4px solid var(--primary); font-weight: 700;}
-        .day-name { font-weight: 600; color: var(--text-secondary); font-size: 1rem; }
-        .day-hours { font-weight: 700; color: var(--text-primary); font-size: 0.95rem; }
-        .closed-day { color: #dc3545; font-style: italic; }
-        .contact-form { background: white; padding: 3rem; border-radius: 30px; box-shadow: var(--shadow-lg); }
-        .contact-form h3 { margin-bottom: 2.5rem; color: var(--secondary); font-family: 'Playfair Display', serif; font-size: 2.2rem; text-align: center; }
-        .form-group { margin-bottom: 2rem; }
-        .form-group label { display: block; margin-bottom: 0.8rem; font-weight: 600; }
-        .form-group input, .form-group textarea { width: 100%; padding: 16px 20px; border: 2px solid var(--border); border-radius: 15px; font-size: 1rem; transition: all 0.3s ease; font-family: inherit; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px rgba(205, 51, 51, 0.1); }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .footer { background: #1a1a1a; color: #b0b0b0; padding: 2rem 0; height: auto; display: flex; align-items: center; }
-        .footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-        .footer-left { display: flex; flex-direction: column; gap: 0.5rem; }
-        .footer-copyright { font-size: 0.9rem; }
-        .footer-powered-by { font-size: 0.9rem; color: #b0b0b0; }
-        .footer-powered-by a { color: #ffffff; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
-        .footer-powered-by a:hover { color: var(--primary); }
-        .footer-right { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-        .footer-links { display: flex; gap: 1.5rem; align-items: center; }
-        .footer-links a { color: #b0b0b0; text-decoration: none; font-size: 0.9rem; transition: color 0.3s ease; }
-        .footer-links a:hover { color: white; }
-        .footer-socials { display: flex; gap: 1rem; }
-        .footer-socials a { color: #b0b0b0; font-size: 1.1rem; transition: color 0.3s ease, transform 0.3s ease; }
-        .footer-socials a:hover { color: white; transform: scale(1.2); }
-        .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; z-index: 2000; opacity: 0; visibility: hidden; backdrop-filter: blur(5px); transition: opacity 0.4s ease, visibility 0.4s ease; }
-        .modal.active { opacity: 1; visibility: visible; }
-        .modal-content { background: white; padding: 2.5rem; border-radius: 24px; max-width: 500px; width: 90%; text-align: center; box-shadow: var(--shadow-lg); transform: scale(0.9) translateY(20px); opacity: 0; transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); position: relative; }
-        .modal.active .modal-content { transform: scale(1) translateY(0); opacity: 1; }
-        .modal-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; color: var(--text-primary); }
-        .close-modal { background: var(--border); border: none; padding: 12px 24px; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; font-size: 1rem; font-weight: 500; }
-        .close-modal:hover { background: var(--primary); color: white; }
-        #reservationModal .modal-content { max-width: 600px; width: 95%; height: 90vh; max-height: 800px; padding: 0; display: flex; flex-direction: column; background-color: var(--bg-secondary); background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23cd3333" fill-opacity="0.06"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); }
-        .close-modal-x { position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 2.5rem; color: var(--text-secondary); cursor: pointer; line-height: 1; transition: all 0.3s ease; z-index: 10; }
-        .close-modal-x:hover { color: var(--primary); transform: rotate(90deg); }
-        .modal-header-custom { padding: 1.5rem; text-align: center; border-bottom: 1px solid var(--border); background: white; }
-        .modal-header-custom .modal-title { margin: 0; font-size: 1.5rem; }
-        .iframe-container { flex-grow: 1; overflow: hidden; }
-        .iframe-container iframe { width: 100%; height: 100%; border: none; }
-        @media (min-width: 992px) { .nav-links { display: flex; position: absolute; left: 50%; transform: translateX(-50%); } .mobile-menu-btn { display: none; } }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(254, 254, 254, 0.98);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo-icon {
+            width: 120px;
+            height: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .order-btn {
+            background: var(--gradient);
+            color: white;
+            border: 2px solid transparent;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+            white-space: nowrap;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+        }
+
+        .order-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .order-btn.secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+            box-shadow: none;
+        }
+
+        .order-btn.secondary:hover {
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            z-index: 1001;
+            padding: 0.5rem;
+        }
+
+        .hero-slider {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .hero-slider .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(139, 21, 56, 0.4) 50%, rgba(212, 175, 55, 0.3) 100%);
+            z-index: -1;
+        }
+
+        .slide-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 2rem;
+            z-index: 1;
+        }
+
+        .slide-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .slide-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .slide-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slide-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary.outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            backdrop-filter: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary.outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        #menu {
+            padding-top: 0;
+        }
+
+        .menu {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #f1f3f4 100%);
+        }
+
+        .menu-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--gradient);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .menu-item-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: all 0.4s ease;
+        }
+
+        .menu-item-card:hover .menu-item-image {
+            transform: scale(1.08);
+        }
+
+        .menu-item-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .menu-item-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            padding: 8px 16px;
+            border-radius: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        .category-section {
+            margin-bottom: 4rem;
+            width: 100%;
+        }
+
+        .category-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .category-title-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .features {
+            background: linear-gradient(135deg, #ffffff 0%, var(--bg-secondary) 100%);
+            padding: 80px 0;
+        }
+
+        .interactive-features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .feature-interactive-card {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-interactive-card:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .feature-interactive-card:hover .feature-bg-image {
+            transform: scale(1.1);
+        }
+
+        .feature-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+            transition: background 0.4s ease;
+        }
+
+        .feature-interactive-card:hover .feature-overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+        }
+
+        .feature-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 0.4s ease, max-height 0.4s ease;
+        }
+
+        .feature-interactive-card:hover .feature-description {
+            opacity: 1;
+            max-height: 100px;
+        }
+
+        .giftcard {
+            background: var(--bg-secondary);
+        }
+
+        .giftcard-content-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .giftcard-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        .giftcard-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .giftcard-text p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .gallery .section-badge {
+            background: rgba(205, 51, 51, 0.2);
+            color: var(--primary);
+        }
+
+        .gallery .section-title,
+        .gallery .section-description {
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            display: flex;
+            align-items: end;
+            padding: 2rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);
+        }
+
+        .contact-location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info-col>*:last-child {
+            margin-bottom: 0;
+        }
+
+        .location-address h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 2.8rem);
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .address-line {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .address-line i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            background: rgba(205, 51, 51, 0.1);
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .location-actions-inline {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 14px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .action-chip.primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 8px 25px rgba(205, 51, 51, 0.25);
+        }
+
+        .action-chip.primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(205, 51, 51, 0.35);
+        }
+
+        .action-chip.secondary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 8px 25px rgba(139, 21, 56, 0.25);
+        }
+
+        .action-chip.secondary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(139, 21, 56, 0.35);
+        }
+
+        .map-container-modern {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 3px solid rgba(205, 51, 51, 0.1);
+            height: 400px;
+            margin-bottom: 2.5rem;
+        }
+
+        .map-status-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(205, 51, 51, 0.3);
+        }
+
+        .status-indicator-map {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .status-dot-animated {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #28a745;
+            animation: statusPulse 2s infinite;
+            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+        }
+
+        .status-dot-animated.closed {
+            background: #dc3545;
+            animation: none;
+            box-shadow: none;
+        }
+
+        @keyframes statusPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+
+        .hours-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hours-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hours-grid-modern {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hours-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.9));
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(205, 51, 51, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(205, 51, 51, 0.2);
+        }
+
+        .card-header i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            background: rgba(205, 51, 51, 0.1);
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .today-card {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+
+        .today-card .card-header {
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .today-card .card-header i {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .today-card .card-title {
+            color: white;
+        }
+
+        .hours-display-large {
+            text-align: center;
+        }
+
+        .hours-time {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .hours-status {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .week-hours {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .day-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 12px;
+        }
+
+        .day-row.today {
+            background: rgba(205, 51, 51, 0.2);
+            border-left: 4px solid var(--primary);
+            font-weight: 700;
+        }
+
+        .day-name {
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .day-hours {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .closed-day {
+            color: #dc3545;
+            font-style: italic;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 2.5rem;
+            color: var(--secondary);
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border);
+            border-radius: 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(205, 51, 51, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #b0b0b0;
+            padding: 2rem 0;
+            height: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+        }
+
+        .footer-powered-by {
+            font-size: 0.9rem;
+            color: #b0b0b0;
+        }
+
+        .footer-powered-by a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-powered-by a:hover {
+            color: var(--primary);
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-socials a {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-socials a:hover {
+            color: white;
+            transform: scale(1.2);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            backdrop-filter: blur(5px);
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transform: scale(0.9) translateY(20px);
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+
+        .close-modal {
+            background: var(--border);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .close-modal:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        #reservationModal .modal-content {
+            max-width: 600px;
+            width: 95%;
+            height: 90vh;
+            max-height: 800px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-secondary);
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23cd3333" fill-opacity="0.06"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+
+        .close-modal-x {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2.5rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            line-height: 1;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .close-modal-x:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-header-custom {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            background: white;
+        }
+
+        .modal-header-custom .modal-title {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .iframe-container {
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-links {
+                display: flex;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
         @media (max-width: 991px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;}
-            .logo-icon { width: 100px; height: 100px; }
-            .header-actions { gap: 0.5rem; }
-            .header-actions .order-btn { padding: 8px 12px; font-size: 0.85rem; }
-            .giftcard-content-area { grid-template-columns: 1fr; text-align: center; }
-            .contact-location-grid { grid-template-columns: 1fr; } .map-container-modern { height: 350px; }
-            .interactive-features-grid { grid-template-columns: 1fr; gap: 1rem; } .feature-interactive-card { height: 250px; }
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
+            }
+
+            .logo-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .header-actions {
+                gap: 0.5rem;
+            }
+
+            .header-actions .order-btn {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+
+            .giftcard-content-area {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container-modern {
+                height: 350px;
+            }
+
+            .interactive-features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .feature-interactive-card {
+                height: 250px;
+            }
         }
+
         @media (max-width: 768px) {
-            section { padding: 60px 0; } .container, .nav-container { padding: 0 1.5rem; }
-            .hero-slider { min-height: 600px; height: auto; } .slide-content { padding: 1.5rem; }
-            .slide-buttons { flex-direction: column; align-items: center; gap: 1rem; }
-            .btn { width: 100%; max-width: 300px; justify-content: center; }
-            .menu-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-            .footer .container { flex-direction: column; text-align: center; align-items: center; }
-            .footer-left, .footer-right { width: 100%; }
-            .footer-right { flex-direction: column; gap: 1rem; }
+            section {
+                padding: 60px 0;
+            }
+
+            .container,
+            .nav-container {
+                padding: 0 1.5rem;
+            }
+
+            .hero-slider {
+                min-height: 600px;
+                height: auto;
+            }
+
+            .slide-content {
+                padding: 1.5rem;
+            }
+
+            .slide-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .footer-left,
+            .footer-right {
+                width: 100%;
+            }
+
+            .footer-right {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
+
         @media (max-width: 600px) {
-            .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-            .menu-item-image { height: 150px; aspect-ratio: 1 / 1; }
-            .menu-item-title { font-size: 1rem; } .menu-item-description { display: none; }
-            .menu-item-content { padding: 1rem; }
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .menu-item-image {
+                height: 150px;
+                aspect-ratio: 1 / 1;
+            }
+
+            .menu-item-title {
+                font-size: 1rem;
+            }
+
+            .menu-item-description {
+                display: none;
+            }
+
+            .menu-item-content {
+                padding: 1rem;
+            }
         }
+
         @media (max-width: 480px) {
-            .slide-title { font-size: 2.2rem; }
-            .slide-description { font-size: 1rem; } .filter-btn { padding: 10px 18px; font-size: 0.9rem; }
+            .slide-title {
+                font-size: 2.2rem;
+            }
+
+            .slide-description {
+                font-size: 1rem;
+            }
+
+            .filter-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
         }
-        .loading { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-primary); display: flex; align-items: center; justify-content: center; z-index: 3000; transition: opacity 0.5s ease; }
-        .loading.hidden { opacity: 0; pointer-events: none; }
-        .spinner { width: 50px; height: 50px; border: 4px solid var(--border); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .mobile-menu { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: rgba(254, 254, 254, 0.98); backdrop-filter: blur(20px); transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 999; overflow-y: auto; }
-        .mobile-menu.active { left: 0; }
-        .mobile-nav-links { display: flex; flex-direction: column; padding: 2rem; gap: 1rem; }
-        .mobile-nav-links a.nav-link-mobile { text-decoration: none; color: var(--text-primary); font-size: 1.4rem; font-weight: 600; padding: 1rem; text-align: center; border-radius: 12px; transition: all 0.3s ease; }
-        .mobile-nav-links a.nav-link-mobile:hover { background: rgba(0,0,0,0.05); color: var(--primary); }
-        .mobile-menu .button-group { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 1rem; 
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 80px);
+            background: rgba(254, 254, 254, 0.98);
+            backdrop-filter: blur(20px);
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 1rem;
+        }
+
+        .mobile-nav-links a.nav-link-mobile {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-links a.nav-link-mobile:hover {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--primary);
+        }
+
+        .mobile-menu .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
             margin-top: 1rem;
             align-items: center;
         }
@@ -309,12 +1507,15 @@
 </head>
 
 <body>
-    <div class="loading" id="loading"><div class="spinner"></div></div>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">
-                <div class="logo-icon"><img src="assets/Logo .png" alt="Sultan The Flaming Tandoor Logo - Indian & Pakistani Restaurant"></div>
+                <div class="logo-icon"><img src="assets/Logo .png"
+                        alt="Sultan The Flaming Tandoor Logo - Indian & Pakistani Restaurant"></div>
             </a>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -345,29 +1546,54 @@
                 <a href="#gallery" class="nav-link-mobile" onclick="toggleMobileMenu()">Gallery</a>
                 <a href="#contact" class="nav-link-mobile" onclick="toggleMobileMenu()">Contact</a>
                 <div class="button-group">
-                    <button class="btn btn-primary" style="justify-content: center;" onclick="openReservationModal(); toggleMobileMenu();"><i class="fas fa-calendar-alt"></i> Reserve Table</button>
-                    <a href="https://order.toasttab.com/online/sultanpdx" class="btn btn-secondary outline" style="justify-content: center;"><i class="fas fa-shopping-cart"></i> Order Now</a>
+                    <button class="btn btn-primary" style="justify-content: center;"
+                        onclick="openReservationModal(); toggleMobileMenu();"><i class="fas fa-calendar-alt"></i>
+                        Reserve Table</button>
+                    <a href="https://order.toasttab.com/online/sultanpdx" class="btn btn-secondary outline"
+                        style="justify-content: center;"><i class="fas fa-shopping-cart"></i> Order Now</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main> 
+    <main>
         <section id="home" class="hero-slider">
             <div class="swiper heroSwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/slider1.png" alt="Plate of authentic Tandoori Chicken from Sultan restaurant" class="slide-bg">
+                        <img src="assets/slider1.png" alt="Plate of authentic Tandoori Chicken from Sultan restaurant"
+                            class="slide-bg">
                         <div class="slide-overlay"></div>
-                        <div class="slide-content"><div class="slide-badge"><i class="fas fa-fire"></i> Authentic • Fresh • Halal</div><h1 class="slide-title">Flame-Kissed<br>Tandoori<br>Perfection</h1><p class="slide-description">Experience the authentic taste of our traditional tandoor oven, where every dish is crafted with passion and fresh ingredients.</p><div class="slide-buttons"><a href="#menu" class="btn btn-primary"><i class="fas fa-utensils"></i> Explore Menu</a><a href="https://order.toasttab.com/online/sultanpdx" class="btn btn-secondary"><i class="fas fa-mobile-alt"></i> Order Online</a></div></div>
+                        <div class="slide-content">
+                            <div class="slide-badge"><i class="fas fa-fire"></i> Authentic • Fresh • Halal</div>
+                            <h1 class="slide-title">Flame-Kissed<br>Tandoori<br>Perfection</h1>
+                            <p class="slide-description">Experience the authentic taste of our traditional tandoor oven,
+                                where every dish is crafted with passion and fresh ingredients.</p>
+                            <div class="slide-buttons"><a href="#menu" class="btn btn-primary"><i
+                                        class="fas fa-utensils"></i> Explore Menu</a><a
+                                    href="https://order.toasttab.com/online/sultanpdx" class="btn btn-secondary"><i
+                                        class="fas fa-mobile-alt"></i> Order Online</a></div>
+                        </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/Slider2.png" alt="Aromatic Chicken Biryani served at Sultan in Sherwood" class="slide-bg">
+                        <img src="assets/Slider2.png" alt="Aromatic Chicken Biryani served at Sultan in Sherwood"
+                            class="slide-bg">
                         <div class="slide-overlay"></div>
-                        <div class="slide-content"><div class="slide-badge"><i class="fas fa-star"></i> Award Winning • Traditional</div><h1 class="slide-title">Aromatic<br>Biryani<br>Excellence</h1><p class="slide-description">Savor our signature biryanis, slow-cooked with premium basmati rice, tender meat, and aromatic spices.</p><div class="slide-buttons"><a href="#menu" class="btn btn-primary"><i class="fas fa-utensils"></i> View Biryani Menu</a><button type="button" onclick="openReservationModal()" class="btn btn-secondary"><i class="fas fa-calendar-alt"></i> Reserve Table</button></div></div>
+                        <div class="slide-content">
+                            <div class="slide-badge"><i class="fas fa-star"></i> Award Winning • Traditional</div>
+                            <h1 class="slide-title">Aromatic<br>Biryani<br>Excellence</h1>
+                            <p class="slide-description">Savor our signature biryanis, slow-cooked with premium basmati
+                                rice, tender meat, and aromatic spices.</p>
+                            <div class="slide-buttons"><a href="#menu" class="btn btn-primary"><i
+                                        class="fas fa-utensils"></i> View Biryani Menu</a><button type="button"
+                                    onclick="openReservationModal()" class="btn btn-secondary"><i
+                                        class="fas fa-calendar-alt"></i> Reserve Table</button></div>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div><div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -376,24 +1602,57 @@
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-badge">Our Signature Menu</div>
                     <h2 class="section-title">Our Authentic Indian & Pakistani Menu</h2>
-                    <p class="section-description">From our traditional tandoor to your table - discover authentic flavors crafted with premium, Halal ingredients.</p>
+                    <p class="section-description">From our traditional tandoor to your table - discover authentic
+                        flavors crafted with premium, Halal ingredients.</p>
                 </div>
-                <div class="menu-filters" data-aos="fade-up" data-aos-delay="200"><button class="filter-btn active" onclick="filterMenu(this, 'appetizers')">Appetizers</button><button class="filter-btn" onclick="filterMenu(this, 'tandoori')">Tandoori</button><button class="filter-btn" onclick="filterMenu(this, 'curries')">Curries</button><button class="filter-btn" onclick="filterMenu(this, 'biryani')">Biryani</button><button class="filter-btn" onclick="filterMenu(this, 'breads')">Breads</button><button class="filter-btn" onclick="filterMenu(this, 'desserts')">Desserts</button><button class="filter-btn" onclick="filterMenu(this, 'drinks')">Drinks</button></div>
+                <div class="menu-filters" data-aos="fade-up" data-aos-delay="200"><button class="filter-btn active"
+                        onclick="filterMenu(this, 'appetizers')">Appetizers</button><button class="filter-btn"
+                        onclick="filterMenu(this, 'tandoori')">Tandoori</button><button class="filter-btn"
+                        onclick="filterMenu(this, 'curries')">Curries</button><button class="filter-btn"
+                        onclick="filterMenu(this, 'biryani')">Biryani</button><button class="filter-btn"
+                        onclick="filterMenu(this, 'breads')">Breads</button><button class="filter-btn"
+                        onclick="filterMenu(this, 'desserts')">Desserts</button><button class="filter-btn"
+                        onclick="filterMenu(this, 'drinks')">Drinks</button></div>
                 <div id="menuGrid"></div>
             </div>
         </section>
-        
+
         <section id="features" class="features">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-badge">Why Choose Sultan</div>
                     <h2 class="section-title">An Authentic Culinary Experience</h2>
-                    <p class="section-description">We bring you the finest Indian and Pakistani cuisine in Sherwood by using traditional cooking methods and the freshest ingredients available.</p>
+                    <p class="section-description">We bring you the finest Indian and Pakistani cuisine in Sherwood by
+                        using traditional cooking methods and the freshest ingredients available.</p>
                 </div>
                 <div class="interactive-features-grid">
-                    <div class="feature-interactive-card" data-aos="fade-up" data-aos-delay="100"><img src="assets/Tandoori Masters.png" class="feature-bg-image" alt="Delicious chicken tikka being cooked in a tandoor oven"><div class="feature-overlay"><h3 class="feature-title">Tandoori Masters</h3><p class="feature-description">Our clay tandoor oven creates that authentic smoky flavor and perfect char.</p></div></div>
-                    <div class="feature-interactive-card" data-aos="fade-up" data-aos-delay="200"><img src="assets/spices.png" class="feature-bg-image" alt="A colorful array of fresh Indian and Pakistani spices"><div class="feature-overlay"><h3 class="feature-title">Fresh Spices</h3><p class="feature-description">We grind our spices daily to create authentic flavor profiles that transport you to South Asia.</p></div></div>
-                    <div class="feature-interactive-card" data-aos="fade-up" data-aos-delay="300"><img src="assets/Expert Chefs.png" class="feature-bg-image" alt="Expert chef preparing a traditional Pakistani dish"><div class="feature-overlay"><h3 class="feature-title">Expert Chefs</h3><p class="feature-description">Our experienced chefs bring generations of culinary knowledge to every dish.</p></div></div>
+                    <div class="feature-interactive-card" data-aos="fade-up" data-aos-delay="100"><img
+                            src="assets/Tandoori Masters.png" class="feature-bg-image"
+                            alt="Delicious chicken tikka being cooked in a tandoor oven">
+                        <div class="feature-overlay">
+                            <h3 class="feature-title">Tandoori Masters</h3>
+                            <p class="feature-description">Our clay tandoor oven creates that authentic smoky flavor and
+                                perfect char.</p>
+                        </div>
+                    </div>
+                    <div class="feature-interactive-card" data-aos="fade-up" data-aos-delay="200"><img
+                            src="assets/spices.png" class="feature-bg-image"
+                            alt="A colorful array of fresh Indian and Pakistani spices">
+                        <div class="feature-overlay">
+                            <h3 class="feature-title">Fresh Spices</h3>
+                            <p class="feature-description">We grind our spices daily to create authentic flavor profiles
+                                that transport you to South Asia.</p>
+                        </div>
+                    </div>
+                    <div class="feature-interactive-card" data-aos="fade-up" data-aos-delay="300"><img
+                            src="assets/Expert Chefs.png" class="feature-bg-image"
+                            alt="Expert chef preparing a traditional Pakistani dish">
+                        <div class="feature-overlay">
+                            <h3 class="feature-title">Expert Chefs</h3>
+                            <p class="feature-description">Our experienced chefs bring generations of culinary knowledge
+                                to every dish.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -403,16 +1662,20 @@
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-badge">Give the Gift of Flavor</div>
                     <h2 class="section-title">Purchase a Gift Card</h2>
-                    <p class="section-description">A perfect present for any occasion. Treat your friends, family, or colleagues to an unforgettable dining experience at Sultan The Flaming Tandoor.</p>
+                    <p class="section-description">A perfect present for any occasion. Treat your friends, family, or
+                        colleagues to an unforgettable dining experience at Sultan The Flaming Tandoor.</p>
                 </div>
                 <div class="giftcard-content-area" data-aos="fade-up" data-aos-delay="200">
                     <div class="giftcard-image">
-                        <img src="assets/giftcard.png" alt="A beautifully presented gift card for Sultan restaurant in Sherwood, OR">
+                        <img src="assets/giftcard.png"
+                            alt="A beautifully presented gift card for Sultan restaurant in Sherwood, OR">
                     </div>
                     <div class="giftcard-text">
                         <h3>Easy, Instant, Memorable</h3>
-                        <p>Our digital gift cards can be sent instantly via email or text message. Choose your desired amount and send a delicious surprise in just a few clicks.</p>
-                        <a href="https://www.toasttab.com/sultanpdx/giftcards" class="btn btn-primary"><i class="fas fa-gift"></i> Buy a Gift Card Now</a>
+                        <p>Our digital gift cards can be sent instantly via email or text message. Choose your desired
+                            amount and send a delicious surprise in just a few clicks.</p>
+                        <a href="https://www.toasttab.com/sultanpdx/giftcards" class="btn btn-primary"><i
+                                class="fas fa-gift"></i> Buy a Gift Card Now</a>
                     </div>
                 </div>
             </div>
@@ -423,17 +1686,44 @@
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-badge">Visual Feast</div>
                     <h2 class="section-title">From Our Kitchen to Your Table</h2>
-                    <p class="section-description">Take a peek into our kitchen and see the artistry behind every dish we create at our Sherwood restaurant.</p>
+                    <p class="section-description">Take a peek into our kitchen and see the artistry behind every dish
+                        we create at our Sherwood restaurant.</p>
                 </div>
                 <div class="gallery-grid">
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><img src="assets/Chicken Tikka Kebab.png" alt="Grilled Chicken Tikka Kebabs on skewers"><div class="gallery-overlay"><span>Chicken Tikka Kebabs</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><img src="assets/Chicken Biryani.jpg" alt="Aromatic Chicken Biryani in a traditional serving bowl"><div class="gallery-overlay"><span>Aromatic Biryani</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><img src="assets/Garlic Naan.jpg" alt="Freshly baked Garlic Naan bread hot from the tandoor"><div class="gallery-overlay"><span>Fresh Garlic Naan</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400"><img src="assets/Butter Masala.jpg" alt="Creamy Butter Chicken curry, a popular Indian dish"><div class="gallery-overlay"><span>Butter Chicken Curry</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500"><img src="assets/Chicken Seekh Kebab.png" alt="Juicy Chicken Seekh Kebabs with mint chutney"><div class="gallery-overlay"><span>Chicken Seekh Kebab</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600"><img src="assets/Vegetable Samosa.png" alt="Crispy fried Vegetable Samosas with dipping sauce"><div class="gallery-overlay"><span>Crispy Samosas</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop" alt="The inside of a flaming hot traditional clay tandoor oven"><div class="gallery-overlay"><span>From the Tandoor</span></div></div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="800"><img src="assets/Chicken 65.jpg" alt="Spicy Chicken 65 appetizer, a popular Indian restaurant dish"><div class="gallery-overlay"><span>Spicy Chicken 65</span></div></div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><img
+                            src="assets/Chicken Tikka Kebab.png" alt="Grilled Chicken Tikka Kebabs on skewers">
+                        <div class="gallery-overlay"><span>Chicken Tikka Kebabs</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><img
+                            src="assets/Chicken Biryani.jpg"
+                            alt="Aromatic Chicken Biryani in a traditional serving bowl">
+                        <div class="gallery-overlay"><span>Aromatic Biryani</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><img src="assets/Garlic Naan.jpg"
+                            alt="Freshly baked Garlic Naan bread hot from the tandoor">
+                        <div class="gallery-overlay"><span>Fresh Garlic Naan</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400"><img
+                            src="assets/Butter Masala.jpg" alt="Creamy Butter Chicken curry, a popular Indian dish">
+                        <div class="gallery-overlay"><span>Butter Chicken Curry</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500"><img
+                            src="assets/Chicken Seekh Kebab.png" alt="Juicy Chicken Seekh Kebabs with mint chutney">
+                        <div class="gallery-overlay"><span>Chicken Seekh Kebab</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600"><img
+                            src="assets/Vegetable Samosa.png" alt="Crispy fried Vegetable Samosas with dipping sauce">
+                        <div class="gallery-overlay"><span>Crispy Samosas</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700"><img
+                            src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=2070&auto=format&fit=crop"
+                            alt="The inside of a flaming hot traditional clay tandoor oven">
+                        <div class="gallery-overlay"><span>From the Tandoor</span></div>
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="800"><img src="assets/Chicken 65.jpg"
+                            alt="Spicy Chicken 65 appetizer, a popular Indian restaurant dish">
+                        <div class="gallery-overlay"><span>Spicy Chicken 65</span></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -443,7 +1733,8 @@
                 <div class="section-header" data-aos="fade-up">
                     <div class="section-badge">Get in Touch</div>
                     <h2 class="section-title">Visit Our Sherwood Restaurant</h2>
-                    <p class="section-description">Come experience authentic Indian and Pakistani flavors in our warm, welcoming atmosphere. We offer dine-in, takeout, and delivery.</p>
+                    <p class="section-description">Come experience authentic Indian and Pakistani flavors in our warm,
+                        welcoming atmosphere. We offer dine-in, takeout, and delivery.</p>
                 </div>
                 <div class="contact-location-grid">
                     <div class="contact-info-col">
@@ -454,27 +1745,41 @@
                                 <span>16370 Southwest Langer Drive, Sherwood, OR 97140</span>
                             </div>
                             <div class="location-actions-inline">
-                                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179135.561924021!2d-122.93184984144314!3d45.4497940501502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956dd67c35f2c3%3A0x800aa523249d3dee!2sSultan%20The%20Flaming%20Tandoor!5e0!3m2!1sen!2sus!4v1756536303797!5m2!1sen!2sus8" target="_blank" class="action-chip primary"><i class="fas fa-directions"></i> Get Directions</a>
-                                <a href="tel:+15036101262" class="action-chip secondary"><i class="fas fa-phone"></i> Call Now</a>
+                                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179135.561924021!2d-122.93184984144314!3d45.4497940501502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956dd67c35f2c3%3A0x800aa523249d3dee!2sSultan%20The%20Flaming%20Tandoor!5e0!3m2!1sen!2sus!4v1756536303797!5m2!1sen!2sus8"
+                                    target="_blank" class="action-chip primary"><i class="fas fa-directions"></i> Get
+                                    Directions</a>
+                                <a href="tel:+15036101262" class="action-chip secondary"><i class="fas fa-phone"></i>
+                                    Call Now</a>
                             </div>
                         </div>
                         <div class="hours-section" data-aos="fade-up" data-aos-delay="100">
-                            <div class="hours-header"><h3>Operating Hours</h3></div>
+                            <div class="hours-header">
+                                <h3>Operating Hours</h3>
+                            </div>
                             <div class="hours-grid-modern">
                                 <div class="hours-card today-card" id="today-card">
-                                    <div class="card-header"><i class="fas fa-clock"></i><span class="card-title">Today</span></div>
+                                    <div class="card-header"><i class="fas fa-clock"></i><span
+                                            class="card-title">Today</span></div>
                                     <div class="hours-display-large" id="today-hours-display"></div>
                                 </div>
                                 <div class="hours-card week-card">
-                                    <div class="card-header"><i class="fas fa-calendar-week"></i><span class="card-title">This Week</span></div>
+                                    <div class="card-header"><i class="fas fa-calendar-week"></i><span
+                                            class="card-title">This Week</span></div>
                                     <div class="week-hours">
-                                        <div class="day-row" data-day="1"><span class="day-name">Monday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
-                                        <div class="day-row" data-day="2"><span class="day-name">Tuesday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
-                                        <div class="day-row" data-day="3"><span class="day-name">Wednesday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
-                                        <div class="day-row" data-day="4"><span class="day-name">Thursday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
-                                        <div class="day-row" data-day="5"><span class="day-name">Friday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
-                                        <div class="day-row" data-day="6"><span class="day-name">Saturday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
-                                        <div class="day-row" data-day="0"><span class="day-name">Sunday</span><span class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="1"><span class="day-name">Monday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="2"><span class="day-name">Tuesday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="3"><span class="day-name">Wednesday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="4"><span class="day-name">Thursday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="5"><span class="day-name">Friday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="6"><span class="day-name">Saturday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
+                                        <div class="day-row" data-day="0"><span class="day-name">Sunday</span><span
+                                                class="day-hours">11:00 AM - 9:00 PM</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -482,16 +1787,29 @@
                     </div>
                     <div class="contact-map-col">
                         <div class="map-container-modern" data-aos="fade-up">
-                            <iframe title="Google Map Location of Sultan The Flaming Tandoor" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179135.561924021!2d-122.93184984144314!3d45.4497940501502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956dd67c35f2c3%3A0x800aa523249d3dee!2sSultan%20The%20Flaming%20Tandoor!5e0!3m2!1sen!2sus!4v1756536303797!5m2!1sen!2sus9" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            <div class="map-status-overlay"><div class="status-indicator-map"><span id="map-status-dot" class="status-dot-animated"></span><span id="map-status-label">Open Now</span></div></div>
+                            <iframe title="Google Map Location of Sultan The Flaming Tandoor"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179135.561924021!2d-122.93184984144314!3d45.4497940501502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54956dd67c35f2c3%3A0x800aa523249d3dee!2sSultan%20The%20Flaming%20Tandoor!5e0!3m2!1sen!2sus!4v1756536303797!5m2!1sen!2sus9"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="map-status-overlay">
+                                <div class="status-indicator-map"><span id="map-status-dot"
+                                        class="status-dot-animated"></span><span id="map-status-label">Open Now</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="contact-form" data-aos="fade-up" data-aos-delay="100">
                             <h3>Send us a Message</h3>
                             <form id="contactForm" action="https://formspree.io/f/xandoboq" method="POST">
-                                <div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
-                                <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
-                                <div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" rows="5" required placeholder="Inquiries about catering, large parties, etc."></textarea></div>
-                                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                                <div class="form-group"><label for="name">Name *</label><input type="text" id="name"
+                                        name="name" required></div>
+                                <div class="form-group"><label for="email">Email *</label><input type="email" id="email"
+                                        name="email" required></div>
+                                <div class="form-group"><label for="message">Message *</label><textarea id="message"
+                                        name="message" rows="5" required
+                                        placeholder="Inquiries about catering, large parties, etc."></textarea></div>
+                                <button type="submit" class="btn btn-primary"
+                                    style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i>
+                                    Send Message</button>
                             </form>
                         </div>
                     </div>
@@ -514,10 +1832,14 @@
                     <a href="#" onclick="showPrivacy()">Privacy</a>
                 </div>
                 <div class="footer-socials">
-                    <a href="https://www.instagram.com/sultanpdx/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.yelp.com/biz/sultan-the-flaming-tandoor-sherwood" target="_blank" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
-                    <a href="https://www.facebook.com/sultantheflamingtandoor/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.tiktok.com/@sultanpdx" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/sultanpdx/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.yelp.com/biz/sultan-the-flaming-tandoor-sherwood" target="_blank"
+                        aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                    <a href="https://www.facebook.com/sultantheflamingtandoor/" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@sultanpdx" target="_blank" aria-label="TikTok"><i
+                            class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
@@ -530,16 +1852,32 @@
                 <h3 class="modal-title">Book Your Table</h3>
             </div>
             <div class="iframe-container">
-                <iframe 
-                    title="EatApp Reservation Widget" 
-                    src="https://eatapp.co/reserve/sultan-the-flaming-tandoor-16370-southwest-langer-drive?source=iframe" 
-                ></iframe> 
+                <iframe title="EatApp Reservation Widget"
+                    src="https://eatapp.co/reserve/sultan-the-flaming-tandoor-16370-southwest-langer-drive?source=iframe"></iframe>
             </div>
         </div>
     </div>
 
-    <div class="modal" id="termsModal"><div class="modal-content"><h3 class="modal-title">Terms of Service</h3><div style="text-align: left; line-height: 1.6; color: var(--text-secondary);"><p>By using this website, you agree to be bound by these terms. Online orders are subject to availability and processed via third-party platforms. Please inform staff of any allergies.</p><p><em>Last updated: August 2025</em></p></div><button class="close-modal" onclick="closeModal(this)">Close</button></div></div>
-    <div class="modal" id="privacyModal"><div class="modal-content"><h3 class="modal-title">Privacy Statement</h3><div style="text-align: left; line-height: 1.6; color: var(--text-secondary);"><p>We may collect your name, phone, and email for reservations or orders. We use this information to process orders and improve our services. We do not sell your personal information.</p><p><em>Last updated: August 2025</em></p></div><button class="close-modal" onclick="closeModal(this)">Close</button></div></div>
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Terms of Service</h3>
+            <div style="text-align: left; line-height: 1.6; color: var(--text-secondary);">
+                <p>By using this website, you agree to be bound by these terms. Online orders are subject to
+                    availability and processed via third-party platforms. Please inform staff of any allergies.</p>
+                <p><em>Last updated: August 2025</em></p>
+            </div><button class="close-modal" onclick="closeModal(this)">Close</button>
+        </div>
+    </div>
+    <div class="modal" id="privacyModal">
+        <div class="modal-content">
+            <h3 class="modal-title">Privacy Statement</h3>
+            <div style="text-align: left; line-height: 1.6; color: var(--text-secondary);">
+                <p>We may collect your name, phone, and email for reservations or orders. We use this information to
+                    process orders and improve our services. We do not sell your personal information.</p>
+                <p><em>Last updated: August 2025</em></p>
+            </div><button class="close-modal" onclick="closeModal(this)">Close</button>
+        </div>
+    </div>
 
     <div class="modal" id="submissionModal">
         <div class="modal-content">
@@ -561,20 +1899,20 @@
                 icon: 'fas fa-utensils',
                 subcategories: {
                     'Vegetable Appetizers': [
-                        { name: 'Aloo Tikki Chaat', description: 'Crispy potato patties, yogurt, mint & tamarind.', price: '$11.00', image: 'assets/Aloo Tikki Chaat.png'},
-                        { name: 'Gobi 65', description: 'Deep-fried breaded cauliflower pieces served in a tangy and spicy red chili sauce', price: '$13.00', image: 'assets/Gobi 65.jpg'},
-                        { name: 'Green Salad', description: 'Lettuce, cucumbers, tomatoes, carrots, and red onions with choice of dressing', price: '$7.00', image: 'assets/Green Salad.jpg'},
-                        { name: 'Onion Bhaji', description: 'Sliced onions coated in spiced chickpea flour batter and deep-fried to a crisp', price: '$9.00', image: 'assets/Onion Bhaji.jpg'},
-                        { name: 'Paneer Pakora', description: 'Deep-fried fritters of Indian cheese cubes coated with spiced chickpea batter', price: '$10.00', image: 'assets/Paneer Pakora.jpg'},
-                        { name: 'Pappadum', description: 'Crispy lentil flatbread wafers', price: '$4.00', image: 'assets/Pappadum.jpg'},
-                        { name: 'Samosa Chaat', description: 'Samosas, onions, tomatoes, cilantro, and chickpeas topped with yogurt, mint, and tamarind sauces', price: '$11.00', image: 'assets/Samosa Chaat.jpg'},
-                        { name: 'Vegetable Pakora', description: 'Deep-fried fritters of potatoes and onions coated with spiced chickpea batter', price: '$9.00', image: 'assets/Vegetable Pakora.png'},
-                        { name: 'Vegetable Samosa', description: 'Deep-fried pastry wraps stuffed with potatoes, peas, and spices', price: '$7.00', image: 'assets/Vegetable Samosa.png'}
+                        { name: 'Aloo Tikki Chaat', description: 'Crispy potato patties, yogurt, mint & tamarind.', price: '$11.00', image: 'assets/Aloo Tikki Chaat.png' },
+                        { name: 'Gobi 65', description: 'Deep-fried breaded cauliflower pieces served in a tangy and spicy red chili sauce', price: '$13.00', image: 'assets/Gobi 65.jpg' },
+                        { name: 'Green Salad', description: 'Lettuce, cucumbers, tomatoes, carrots, and red onions with choice of dressing', price: '$7.00', image: 'assets/Green Salad.jpg' },
+                        { name: 'Onion Bhaji', description: 'Sliced onions coated in spiced chickpea flour batter and deep-fried to a crisp', price: '$9.00', image: 'assets/Onion Bhaji.jpg' },
+                        { name: 'Paneer Pakora', description: 'Deep-fried fritters of Indian cheese cubes coated with spiced chickpea batter', price: '$10.00', image: 'assets/Paneer Pakora.jpg' },
+                        { name: 'Pappadum', description: 'Crispy lentil flatbread wafers', price: '$4.00', image: 'assets/Pappadum.jpg' },
+                        { name: 'Samosa Chaat', description: 'Samosas, onions, tomatoes, cilantro, and chickpeas topped with yogurt, mint, and tamarind sauces', price: '$11.00', image: 'assets/Samosa Chaat.jpg' },
+                        { name: 'Vegetable Pakora', description: 'Deep-fried fritters of potatoes and onions coated with spiced chickpea batter', price: '$9.00', image: 'assets/Vegetable Pakora.png' },
+                        { name: 'Vegetable Samosa', description: 'Deep-fried pastry wraps stuffed with potatoes, peas, and spices', price: '$7.00', image: 'assets/Vegetable Samosa.png' }
                     ],
                     'Non-Vegetable Appetizers': [
-                        { name: 'Chicken 65', description: 'Deep-fried breaded chicken breast pieces served in a tangy and spicy red chili sauce', price: '$15.00', image: 'assets/Chicken 65.jpg'},
-                        { name: 'Masala Fish Pakora', description: 'Deep-fried fritters of fish coated with spiced chickpea batter', price: '$12.00', image: 'assets/Masala Fish Pakora.jpg'},
-                        { name: 'Punjabi Chicken Pakora', description: 'Deep-fried fritters of boneless chicken coated with spiced chickpea batter', price: '$11.00', image: 'assets/Punjabi Chicken Pakora.jpg'}
+                        { name: 'Chicken 65', description: 'Deep-fried breaded chicken breast pieces served in a tangy and spicy red chili sauce', price: '$15.00', image: 'assets/Chicken 65.jpg' },
+                        { name: 'Masala Fish Pakora', description: 'Deep-fried fritters of fish coated with spiced chickpea batter', price: '$12.00', image: 'assets/Masala Fish Pakora.jpg' },
+                        { name: 'Punjabi Chicken Pakora', description: 'Deep-fried fritters of boneless chicken coated with spiced chickpea batter', price: '$11.00', image: 'assets/Punjabi Chicken Pakora.jpg' }
                     ]
                 }
             },
@@ -582,15 +1920,15 @@
                 icon: 'fas fa-fire',
                 subcategories: {
                     'Tandoori Grill': [
-                        { name: 'Mixed Grill', description: 'Afghani malai tikka, chicken tikka, tandoori chicken, lamb seekh kebab, and lamb chops', price: '$35.00', image: 'assets/Mixed Grill.jpg'},
-                        { name: 'Half Plate Tandoori Chicken', description: 'Bone-in chicken leg quarters marinated in tandoori sauce, 4 pieces', price: '$12.00', image: 'assets/Full Plate Tandoori Chicken.jpg'},
-                        { name: 'Full Plate Tandoori Chicken', description: 'Bone-in chicken leg quarters marinated in tandoori sauce, 8 pieces', price: '$22.00', image: 'assets/Full Plate Tandoori Chicken.jpg'},
-                        { name: 'Chicken Tikka Kebab', description: 'Tender pieces of boneless, skinless chicken marinated in tandoori sauce', price: '$16.00', image: 'assets/Chicken Tikka Kebab.png'},
-                        { name: 'Afghani Malai Tikka Kebab', description: 'Tender pieces of boneless, skinless chicken marinated in spicy cream sauce', price: '$16.00', image: 'assets/Afghani Malai Tikka Kebab.png'},
-                        { name: 'Chicken Seekh Kebab', description: 'Ground chicken marinated with spices, ginger, garlic, and cilantro, 8 pieces', price: '$14.00', image: 'assets/Chicken Seekh Kebab.png'},
-                        { name: 'Lamb Seekh Kebab', description: 'Ground lamb marinated with spices, ginger, garlic, and cilantro. 8 pieces', price: '$16.00', image: 'assets/Lamb Seekh Kebab.png'},
-                        { name: 'Seekh Kebab Combo', description: 'Combination of lamb and chicken seekh kebabs', price: '$22.00', image: 'assets/Seekh Kebab Combo.png'},
-                        { name: 'Lamb Chops', description: 'Bone-in lamb chops marinated in tandoori sauce, 6 pieces', price: '$30.00', image: 'assets/Lamb Chops.jpg'}
+                        { name: 'Mixed Grill', description: 'Afghani malai tikka, chicken tikka, tandoori chicken, lamb seekh kebab, and lamb chops', price: '$35.00', image: 'assets/Mixed Grill.jpg' },
+                        { name: 'Half Plate Tandoori Chicken', description: 'Bone-in chicken leg quarters marinated in tandoori sauce, 4 pieces', price: '$12.00', image: 'assets/Full Plate Tandoori Chicken.jpg' },
+                        { name: 'Full Plate Tandoori Chicken', description: 'Bone-in chicken leg quarters marinated in tandoori sauce, 8 pieces', price: '$22.00', image: 'assets/Full Plate Tandoori Chicken.jpg' },
+                        { name: 'Chicken Tikka Kebab', description: 'Tender pieces of boneless, skinless chicken marinated in tandoori sauce', price: '$16.00', image: 'assets/Chicken Tikka Kebab.png' },
+                        { name: 'Afghani Malai Tikka Kebab', description: 'Tender pieces of boneless, skinless chicken marinated in spicy cream sauce', price: '$16.00', image: 'assets/Afghani Malai Tikka Kebab.png' },
+                        { name: 'Chicken Seekh Kebab', description: 'Ground chicken marinated with spices, ginger, garlic, and cilantro, 8 pieces', price: '$14.00', image: 'assets/Chicken Seekh Kebab.png' },
+                        { name: 'Lamb Seekh Kebab', description: 'Ground lamb marinated with spices, ginger, garlic, and cilantro. 8 pieces', price: '$16.00', image: 'assets/Lamb Seekh Kebab.png' },
+                        { name: 'Seekh Kebab Combo', description: 'Combination of lamb and chicken seekh kebabs', price: '$22.00', image: 'assets/Seekh Kebab Combo.png' },
+                        { name: 'Lamb Chops', description: 'Bone-in lamb chops marinated in tandoori sauce, 6 pieces', price: '$30.00', image: 'assets/Lamb Chops.jpg' }
                     ]
                 }
             },
@@ -598,29 +1936,29 @@
                 icon: 'fas fa-bowl-food',
                 subcategories: {
                     'Custom Entrées (Choose Protein)': [
-                        { name: 'Achari Masala', description: 'A spicy and sour traditional Indian spice mix in a tangy tomato sauce', price: '$17.00', image: 'assets/Achari Masala.jpg'},
-                        { name: 'Butter Masala', description: 'A rich tomato sauce with onions, masala, cream and butter', price: '$17.00', image: 'assets/Butter Masala.jpg'},
-                        { name: 'Karahi', description: 'A heavy curry made with onions, tomatoes, capsicum, garlic, and spices', price: '$17.00', image: 'assets/Karahi.jpg'},
-                        { name: 'Khorma', description: 'A thick creamy sauce made with cashew nuts, yogurt, onion paste, and spices', price: '$17.00', image: 'assets/Khorma.png'},
-                        { name: 'Tikka Masala', description: 'A tangy tomato sauce with onions, bell peppers, ginger, spices, and cream', price: '$17.00', image: 'assets/Tikka Masala.png'},
-                        { name: 'Mango Tikka Masala', description: 'A sweet and tangy tomato sauce with cream and mango purée', price: '$17.00', image: 'assets/Mango Tikka Masala.png'},
-                        { name: 'Saagwala', description: 'A creamy mixture of fresh greens, spinach, onions, tomatoes, garlic, and spices', price: '$17.00', image: 'assets/Saagwala.jpg'},
-                        { name: 'Vindaloo', description: 'A spicy sauce made with red chili peppers, potatoes, vinegar, and spices', price: '$17.00', image: 'assets/Vindaloo.png'},
-                        { name: 'Madras Curry', description: 'A south Indian curry with onions, coconut milk, and spices', price: '$17.00', image: 'assets/Madras Curry.jpg'},
-                        { name: 'Rajasthani Curry', description: 'A thick sauce with onions, tomatoes, ginger, garlic, fennel, and black pepper', price: '$17.00', image: 'assets/Rajasthani Curry.jpg'},
-                        { name: 'Methi Curry', description: 'A creamy north indian dish with fenugreek leaves, turmeric, and spices', price: '$17.00', image: 'assets/Methi Curry.jpg'}
+                        { name: 'Achari Masala', description: 'A spicy and sour traditional Indian spice mix in a tangy tomato sauce', price: '$17.00', image: 'assets/Achari Masala.jpg' },
+                        { name: 'Butter Masala', description: 'A rich tomato sauce with onions, masala, cream and butter', price: '$17.00', image: 'assets/Butter Masala.jpg' },
+                        { name: 'Karahi', description: 'A heavy curry made with onions, tomatoes, capsicum, garlic, and spices', price: '$17.00', image: 'assets/Karahi.jpg' },
+                        { name: 'Khorma', description: 'A thick creamy sauce made with cashew nuts, yogurt, onion paste, and spices', price: '$17.00', image: 'assets/Khorma.png' },
+                        { name: 'Tikka Masala', description: 'A tangy tomato sauce with onions, bell peppers, ginger, spices, and cream', price: '$17.00', image: 'assets/Tikka Masala.png' },
+                        { name: 'Mango Tikka Masala', description: 'A sweet and tangy tomato sauce with cream and mango purée', price: '$17.00', image: 'assets/Mango Tikka Masala.png' },
+                        { name: 'Saagwala', description: 'A creamy mixture of fresh greens, spinach, onions, tomatoes, garlic, and spices', price: '$17.00', image: 'assets/Saagwala.jpg' },
+                        { name: 'Vindaloo', description: 'A spicy sauce made with red chili peppers, potatoes, vinegar, and spices', price: '$17.00', image: 'assets/Vindaloo.png' },
+                        { name: 'Madras Curry', description: 'A south Indian curry with onions, coconut milk, and spices', price: '$17.00', image: 'assets/Madras Curry.jpg' },
+                        { name: 'Rajasthani Curry', description: 'A thick sauce with onions, tomatoes, ginger, garlic, fennel, and black pepper', price: '$17.00', image: 'assets/Rajasthani Curry.jpg' },
+                        { name: 'Methi Curry', description: 'A creamy north indian dish with fenugreek leaves, turmeric, and spices', price: '$17.00', image: 'assets/Methi Curry.jpg' }
                     ],
                     'Traditional Entrées': [
-                        { name: 'Aloo Gobi Masala', description: 'Cauliflower, potatoes, onions, ginger, garlic, masala, and spices', price: '$17.00', image: 'assets/Aloo Gobi Masala.png'},
-                        { name: 'Aloo Matar Masala', description: 'Peas, potatoes, onions, tomatoes, ginger, garlic, masala, and spices', price: '$17.00', image: 'assets/Aloo Matar Masala.jpg'},
-                        { name: 'Baingan Bharta', description: 'A savory mash made with grilled eggplants, onions, tomatoes, and spices', price: '$17.00', image: 'assets/Baingan Bharta.jpg'},
-                        { name: 'Chaana Masala', description: 'Chickpeas prepared with onions, tomatoes, ginger, garlic, masala, and spices', price: '$17.00', image: 'assets/Chaana Masala.png'},
-                        { name: 'Malai Kofta', description: 'Fried potato and paneer dumplings cooked in a creamy cashew and onion sauce', price: '$18.00', image: 'assets/Malai Kofta.png'},
-                        { name: 'Mixed Vegetable Masala', description: 'Mixed vegetables prepared in a paste of onions, masala, and spices', price: '$17.00', image: 'assets/Mixed Vegetable Masala.jpg'},
-                        { name: 'Navratan Korma', description: 'Mixed vegetables and dried fruits cooked in a creamy cashew sauce', price: '$17.00', image: 'assets/Navratan Korma.png'},
-                        { name: 'Dahl Makhni', description: 'Urad lentils and kidney beans cooked with butter, tomatoes, and spices', price: '$17.00', image: 'assets/Dahl Makhni.jpg'},
-                        { name: 'Punjabi Dahl Tadka', description: 'A savory lentil stew cooked with ginger, garlic, onion, and spices', price: '$17.00', image: 'assets/Punjabi Dahl Tadka.jpg'},
-                        { name: 'Punjabi Goat Masala', description: 'Tender bone-in goat meat cooked with onions, tomatoes, and spices', price: '$22.00', image: 'assets/Punjabi Goat Masala.png'}
+                        { name: 'Aloo Gobi Masala', description: 'Cauliflower, potatoes, onions, ginger, garlic, masala, and spices', price: '$17.00', image: 'assets/Aloo Gobi Masala.png' },
+                        { name: 'Aloo Matar Masala', description: 'Peas, potatoes, onions, tomatoes, ginger, garlic, masala, and spices', price: '$17.00', image: 'assets/Aloo Matar Masala.jpg' },
+                        { name: 'Baingan Bharta', description: 'A savory mash made with grilled eggplants, onions, tomatoes, and spices', price: '$17.00', image: 'assets/Baingan Bharta.jpg' },
+                        { name: 'Chaana Masala', description: 'Chickpeas prepared with onions, tomatoes, ginger, garlic, masala, and spices', price: '$17.00', image: 'assets/Chaana Masala.png' },
+                        { name: 'Malai Kofta', description: 'Fried potato and paneer dumplings cooked in a creamy cashew and onion sauce', price: '$18.00', image: 'assets/Malai Kofta.png' },
+                        { name: 'Mixed Vegetable Masala', description: 'Mixed vegetables prepared in a paste of onions, masala, and spices', price: '$17.00', image: 'assets/Mixed Vegetable Masala.jpg' },
+                        { name: 'Navratan Korma', description: 'Mixed vegetables and dried fruits cooked in a creamy cashew sauce', price: '$17.00', image: 'assets/Navratan Korma.png' },
+                        { name: 'Dahl Makhni', description: 'Urad lentils and kidney beans cooked with butter, tomatoes, and spices', price: '$17.00', image: 'assets/Dahl Makhni.jpg' },
+                        { name: 'Punjabi Dahl Tadka', description: 'A savory lentil stew cooked with ginger, garlic, onion, and spices', price: '$17.00', image: 'assets/Punjabi Dahl Tadka.jpg' },
+                        { name: 'Punjabi Goat Masala', description: 'Tender bone-in goat meat cooked with onions, tomatoes, and spices', price: '$22.00', image: 'assets/Punjabi Goat Masala.png' }
                     ]
                 }
             },
@@ -628,15 +1966,15 @@
                 icon: 'fas fa-drumstick-bite',
                 subcategories: {
                     'Biryani': [
-                        { name: 'Chicken Biryani', description: 'Boneless chicken slow-cooked with biryani masala, spices, and basmati rice', price: '$19.00', image: 'assets/Chicken Biryani.jpg'},
-                        { name: 'Chicken Tikka Biryani', description: 'Boneless chicken tikka kebab pieces slow-cooked with biryani masala', price: '$20.00', image: 'assets/Chicken Tikka Biryani.jpg'},
-                        { name: 'Goat Biryani', description: 'Tender bone-in goat meat slow-cooked with biryani masala and basmati rice', price: '$22.00', image: 'assets/Goat Biryani.jpg'},
-                        { name: 'Lamb Biryani', description: 'Tender pieces of lamb slow-cooked with biryani masala and basmati rice', price: '$22.00', image: 'assets/Goat Biryani.jpg'},
-                        { name: 'Paneer Biryani', description: 'Indian cheese cubes slow-cooked with biryani masala and basmati rice', price: '$19.00', image: 'assets/Paneer Biryani.jpg'},
-                        { name: 'Vegetable Biryani', description: 'Mixed vegetables slow-cooked with biryani masala and basmati rice', price: '$17.00', image: 'assets/Vegetable Biryani.jpg'}
+                        { name: 'Chicken Biryani', description: 'Boneless chicken slow-cooked with biryani masala, spices, and basmati rice', price: '$19.00', image: 'assets/Chicken Biryani.jpg' },
+                        { name: 'Chicken Tikka Biryani', description: 'Boneless chicken tikka kebab pieces slow-cooked with biryani masala', price: '$20.00', image: 'assets/Chicken Tikka Biryani.jpg' },
+                        { name: 'Goat Biryani', description: 'Tender bone-in goat meat slow-cooked with biryani masala and basmati rice', price: '$22.00', image: 'assets/Goat Biryani.jpg' },
+                        { name: 'Lamb Biryani', description: 'Tender pieces of lamb slow-cooked with biryani masala and basmati rice', price: '$22.00', image: 'assets/Goat Biryani.jpg' },
+                        { name: 'Paneer Biryani', description: 'Indian cheese cubes slow-cooked with biryani masala and basmati rice', price: '$19.00', image: 'assets/Paneer Biryani.jpg' },
+                        { name: 'Vegetable Biryani', description: 'Mixed vegetables slow-cooked with biryani masala and basmati rice', price: '$17.00', image: 'assets/Vegetable Biryani.jpg' }
                     ],
                     'Rice': [
-                        { name: 'Basmati Rice', description: 'Long-grained basmati rice', price: '$5.00', image: 'assets/Basmati Rice.png'}
+                        { name: 'Basmati Rice', description: 'Long-grained basmati rice', price: '$5.00', image: 'assets/Basmati Rice.png' }
                     ]
                 }
             },
@@ -644,17 +1982,17 @@
                 icon: 'fas fa-bread-slice',
                 subcategories: {
                     'Tandoori Bread': [
-                        { name: 'Bread Basket', description: 'Plain naan, garlic naan, garlic cheese naan, and punjabi paratha', price: '$18.00', image: 'assets/Bread Basket.png'},
-                        { name: 'Plain Naan', description: 'Soft leavened flatbread made from white flour', price: '$3.00', image: 'assets/Plain Naan.png'},
-                        { name: 'Butter Naan', description: 'Topped with butter', price: '$4.00', image: 'assets/Butter Naan.png'},
-                        { name: 'Garlic Naan', description: 'Topped with fresh garlic and cilantro', price: '$5.00', image: 'assets/Garlic Naan.jpg'},
-                        { name: 'Garlic Cheese Naan', description: 'Stuffed with mozzarella cheese and topped with garlic and cilantro', price: '$7.00', image: 'assets/Garlic Cheese Naan.png'},
-                        { name: 'Chili Cheese Naan', description: 'Stuffed with mozzarella cheese and green chili peppers', price: '$7.00', image: 'assets/Chili Cheese Naan.jpg'},
-                        { name: 'Spinach Cheese Naan', description: 'Stuffed with mozzarella cheese and spinach', price: '$7.00', image: 'assets/Spinach Cheese Naan.jpg'},
-                        { name: 'Aloo Paratha', description: 'Flaky unleavened whole wheat flatbread stuffed with potatoes and spices', price: '$5.00', image: 'assets/Aloo Paratha.jpg'},
-                        { name: 'Lacha Paratha', description: 'Flaky unleavened whole wheat flatbread topped with butter', price: '$4.00', image: 'assets/Lacha Paratha.jpg'},
-                        { name: 'Punjabi Batura', description: 'Deep-fried leavened flatbread', price: '$4.00', image: 'assets/Punjabi Batura.jpg'},
-                        { name: 'Tandoori Roti', description: 'Whole wheat unleavened flatbread', price: '$3.00', image: 'assets/Tandoori Roti.png'}
+                        { name: 'Bread Basket', description: 'Plain naan, garlic naan, garlic cheese naan, and punjabi paratha', price: '$18.00', image: 'assets/Bread Basket.png' },
+                        { name: 'Plain Naan', description: 'Soft leavened flatbread made from white flour', price: '$3.00', image: 'assets/Plain Naan.png' },
+                        { name: 'Butter Naan', description: 'Topped with butter', price: '$4.00', image: 'assets/Butter Naan.png' },
+                        { name: 'Garlic Naan', description: 'Topped with fresh garlic and cilantro', price: '$5.00', image: 'assets/Garlic Naan.jpg' },
+                        { name: 'Garlic Cheese Naan', description: 'Stuffed with mozzarella cheese and topped with garlic and cilantro', price: '$7.00', image: 'assets/Garlic Cheese Naan.png' },
+                        { name: 'Chili Cheese Naan', description: 'Stuffed with mozzarella cheese and green chili peppers', price: '$7.00', image: 'assets/Chili Cheese Naan.jpg' },
+                        { name: 'Spinach Cheese Naan', description: 'Stuffed with mozzarella cheese and spinach', price: '$7.00', image: 'assets/Spinach Cheese Naan.jpg' },
+                        { name: 'Aloo Paratha', description: 'Flaky unleavened whole wheat flatbread stuffed with potatoes and spices', price: '$5.00', image: 'assets/Aloo Paratha.jpg' },
+                        { name: 'Lacha Paratha', description: 'Flaky unleavened whole wheat flatbread topped with butter', price: '$4.00', image: 'assets/Lacha Paratha.jpg' },
+                        { name: 'Punjabi Batura', description: 'Deep-fried leavened flatbread', price: '$4.00', image: 'assets/Punjabi Batura.jpg' },
+                        { name: 'Tandoori Roti', description: 'Whole wheat unleavened flatbread', price: '$3.00', image: 'assets/Tandoori Roti.png' }
                     ]
                 }
             },
@@ -662,8 +2000,8 @@
                 icon: 'fas fa-ice-cream',
                 subcategories: {
                     'Desserts': [
-                        { name: 'Gulab Jamun', description: 'Fried semolina and milk donut balls, soaked in a sweet syrup, 3 pieces', price: '$7.00', image: 'assets/Gulab Jamun.png'},
-                        { name: 'Rasmalai', description: 'Cottage cheese dumplings soaked in sweet flavored milk, 2 pieces', price: '$7.00', image: 'assets/Rasmalai.jpeg'}
+                        { name: 'Gulab Jamun', description: 'Fried semolina and milk donut balls, soaked in a sweet syrup, 3 pieces', price: '$7.00', image: 'assets/Gulab Jamun.png' },
+                        { name: 'Rasmalai', description: 'Cottage cheese dumplings soaked in sweet flavored milk, 2 pieces', price: '$7.00', image: 'assets/Rasmalai.jpeg' }
                     ]
                 }
             },
@@ -671,13 +2009,13 @@
                 icon: 'fas fa-cocktail',
                 subcategories: {
                     'Beverages': [
-                        { name: 'Mango Lassi', description: 'Mango purée, buttermilk, yogurt, and sugar', price: '$6.00', image: 'assets/Mango Lassi.png'},
-                        { name: 'Sweet Lassi', description: 'Buttermilk, yogurt, and sugar', price: '$5.00', image: 'assets/Sweet Lassi.png'},
-                        { name: 'Salty Lassi', description: 'Buttermilk, yogurt, and salt', price: '$5.00', image: 'assets/Salty Lassi.png'},
-                        { name: 'Fresh Coconut Water', description: 'Fresh coconut water in a coconut shell', price: '$8.00', image: 'assets/Fresh Coconut Water.jpg'},
-                        { name: 'Chai Milk Tea', description: 'Masala chai tea with milk, sugar, ginger, and spices', price: '$4.00', image: 'assets/Chai Milk Tea.png'},
-                        { name: 'Water Bottle', description: '', price: '$3.00', image: 'assets/Water Bottle.jpg'},
-                        { name: 'Soda Bottle', description: '', price: '$3.00', image: 'assets/Soda Bottle.jpg'}
+                        { name: 'Mango Lassi', description: 'Mango purée, buttermilk, yogurt, and sugar', price: '$6.00', image: 'assets/Mango Lassi.png' },
+                        { name: 'Sweet Lassi', description: 'Buttermilk, yogurt, and sugar', price: '$5.00', image: 'assets/Sweet Lassi.png' },
+                        { name: 'Salty Lassi', description: 'Buttermilk, yogurt, and salt', price: '$5.00', image: 'assets/Salty Lassi.png' },
+                        { name: 'Fresh Coconut Water', description: 'Fresh coconut water in a coconut shell', price: '$8.00', image: 'assets/Fresh Coconut Water.jpg' },
+                        { name: 'Chai Milk Tea', description: 'Masala chai tea with milk, sugar, ginger, and spices', price: '$4.00', image: 'assets/Chai Milk Tea.png' },
+                        { name: 'Water Bottle', description: '', price: '$3.00', image: 'assets/Water Bottle.jpg' },
+                        { name: 'Soda Bottle', description: '', price: '$3.00', image: 'assets/Soda Bottle.jpg' }
                     ]
                 }
             }
@@ -691,7 +2029,7 @@
             updateRestaurantStatus();
             setupScrollSpy();
             setInterval(updateRestaurantStatus, 60000);
-            
+
             // NEW: Attach the new form handler to the contact form
             const contactForm = document.getElementById('contactForm');
             if (contactForm) {
@@ -725,9 +2063,9 @@
                 const categorySection = document.createElement('div');
                 categorySection.className = 'category-section';
                 categorySection.setAttribute('data-aos', 'fade-up');
-                
+
                 categorySection.innerHTML = `<div class="category-header"><h3 class="category-title-main">${subcategory}</h3></div>`;
-                
+
                 const itemsGrid = document.createElement('div');
                 itemsGrid.className = 'menu-grid';
 
@@ -735,7 +2073,7 @@
                     const itemCard = document.createElement('div');
                     itemCard.className = 'menu-item-card';
                     itemCard.setAttribute('data-aos', 'fade-up');
-                    
+
                     itemCard.innerHTML = `
                         <div style="position: relative; overflow: hidden;">
                             <img src="${item.image}" alt="${item.name} - ${subcategory} from Sultan Restaurant" class="menu-item-image" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/ffffff?text=Image+Coming+Soon';">
@@ -753,17 +2091,17 @@
             }
             AOS.refresh();
         }
-        
+
         function openReservationModal() {
             document.getElementById('reservationModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        function showTerms() { 
-            document.getElementById('termsModal').classList.add('active'); 
+        function showTerms() {
+            document.getElementById('termsModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-        function showPrivacy() { 
-            document.getElementById('privacyModal').classList.add('active'); 
+        function showPrivacy() {
+            document.getElementById('privacyModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         function closeModal(button) {
@@ -775,7 +2113,7 @@
                 document.body.style.overflow = '';
             }
         }
-        
+
         document.querySelectorAll('.modal').forEach(modal => {
             modal.addEventListener('click', e => {
                 if (e.target === modal) {
@@ -852,8 +2190,8 @@
             const isOpen = (operatingHours[day] && hour >= operatingHours[day][0] && hour < operatingHours[day][1]);
             const mapStatusLabel = document.getElementById('map-status-label');
             const mapStatusDot = document.getElementById('map-status-dot');
-            if(mapStatusLabel) mapStatusLabel.textContent = isOpen ? 'Open Now' : 'Closed';
-            if(mapStatusDot) mapStatusDot.classList.toggle('closed', !isOpen);
+            if (mapStatusLabel) mapStatusLabel.textContent = isOpen ? 'Open Now' : 'Closed';
+            if (mapStatusDot) mapStatusDot.classList.toggle('closed', !isOpen);
             document.querySelectorAll('.day-row').forEach(row => row.classList.remove('today'));
             const todayRow = document.querySelector(`.day-row[data-day="${day}"]`);
             if (todayRow) todayRow.classList.add('today');
